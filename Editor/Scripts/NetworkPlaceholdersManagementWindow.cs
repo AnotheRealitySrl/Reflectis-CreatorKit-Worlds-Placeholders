@@ -1,5 +1,3 @@
-using Reflectis.CreatorKit.Worlds.Placeholders;
-
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,7 +6,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Reflectis.CreatorKit.Worlds.PlaceholdersEditor
+namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
 {
     public class NetworkPlaceholdersManagementWindow : EditorWindow
     {

@@ -1,13 +1,11 @@
-using Reflectis.CreatorKit.Worlds.Placeholders;
-
 using UnityEditor;
 
 using UnityEngine;
 
-namespace Reflectis.CreatorKit.Worlds.PlaceholdersEditor
+namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
 {
     [CustomEditor(typeof(SceneComponentPlaceholderBase), true)]
-    public class NetworkPlaceholderEditor : Editor
+    public class NetworkPlaceholderEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
         {

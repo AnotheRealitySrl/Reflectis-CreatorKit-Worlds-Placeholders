@@ -1,5 +1,3 @@
-using Reflectis.CreatorKit.Worlds.Placeholders;
-
 using UnityEditor;
 
 using UnityEngine;
@@ -7,10 +5,10 @@ using UnityEngine;
 using static Reflectis.SDK.Core.Interaction.ContextualMenuManageable;
 using static Reflectis.SDK.Core.Interaction.IInteractable;
 
-namespace Reflectis.CreatorKit.Worlds.PlaceholdersEditor
+namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
 {
     [CustomEditor(typeof(InteractablePlaceholder))]
-    public class InteractablePlaceholderEditor : Editor
+    public class InteractablePlaceholderEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
         {
