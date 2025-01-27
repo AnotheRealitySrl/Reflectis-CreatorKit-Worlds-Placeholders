@@ -1,4 +1,4 @@
-using Reflectis.CreatorKit.Worlds.Placeholders.ClientModels;
+using Reflectis.CreatorKit.Worlds.Core.ClientModels;
 using Reflectis.CreatorKit.Worlds.Placeholders;
 using Reflectis.SDK.Utilities;
 
