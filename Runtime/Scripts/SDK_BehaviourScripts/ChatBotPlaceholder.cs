@@ -1,5 +1,5 @@
 using Reflectis.SDK.Core.ChatBot;
-using Reflectis.SDK.Utilities;
+using Reflectis.SDK.Core.Utilities;
 
 using UnityEngine;
 using UnityEngine.Events;

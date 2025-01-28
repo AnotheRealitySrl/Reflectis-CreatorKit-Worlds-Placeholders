@@ -1,6 +1,6 @@
 using Reflectis.CreatorKit.Worlds.Core.ClientModels;
 using Reflectis.CreatorKit.Worlds.Placeholders;
-using Reflectis.SDK.Utilities;
+using Reflectis.SDK.Core.Utilities;
 
 using UnityEngine;
 using UnityEngine.Events;
