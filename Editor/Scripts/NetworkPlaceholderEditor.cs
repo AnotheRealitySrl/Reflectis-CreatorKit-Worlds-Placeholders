@@ -21,9 +21,9 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
 
                 EditorGUILayout.Separator();
                 EditorGUILayout.LabelField("Debug", EditorStyles.boldLabel);
-                EditorGUILayout.LabelField($"<b>Initialization id:</b> {networkPlaceholder.InitializationId}", style);
+                EditorGUILayout.LabelField($"<b>Initialization id:</b> {placeholder.UniqueID}", style);
 
-                if (networkPlaceholder.InitializationId == 0)
+                if (placeholder.UniqueID == 0)
                 {
                     EditorGUILayout.HelpBox("This network placeholder has a null ID. Go to Reflectis > Network placeholders management to assign the IDs of all components", MessageType.Error);
                 }

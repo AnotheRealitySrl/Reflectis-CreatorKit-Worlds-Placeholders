@@ -8,22 +8,22 @@ using UnityEngine.SceneManagement;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
 {
-    public class NetworkPlaceholdersManagementWindow : EditorWindow
+    public class SceneObjectsManagementWindow : EditorWindow
     {
-        private List<SceneComponentPlaceholderBase> networkPlaceholders = new();
+        private List<SceneObjectId> sceneObjects = new();
 
         private Vector2 scrollPosition = Vector2.zero;
 
-        [MenuItem("Reflectis/Network placeholders management")]
+        [MenuItem("Reflectis/Scene Objects management")]
         public static void ShowWindow()
         {
             //Show existing window instance. If one doesn't exist, make one.
-            GetWindow(typeof(NetworkPlaceholdersManagementWindow));
+            GetWindow(typeof(SceneObjectsManagementWindow));
         }
 
         private void OnGUI()
         {
-            FindNetworkPlaceholders();
+            FindPlaceholders();
             DisplayPlaceholders();
 
             GUIStyle btnStyle = new(GUI.skin.button)
@@ -41,17 +41,16 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
             }
         }
 
-        private void FindNetworkPlaceholders()
+        private void FindPlaceholders()
         {
             Scene s = SceneManager.GetActiveScene();
             GameObject[] gameObjects = s.GetRootGameObjects();
 
-            networkPlaceholders.Clear();
+            sceneObjects.Clear();
 
             foreach (GameObject obj in gameObjects)
             {
-                networkPlaceholders.AddRange(obj.GetComponentsInChildren<SceneComponentPlaceholderBase>(true)
-                        .Where(p => p is INetworkPlaceholder np && np.IsNetworked));
+                sceneObjects.AddRange(obj.GetComponentsInChildren<SceneObjectId>(true));
             }
         }
 
@@ -61,10 +60,14 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
 
             if (overrideAll)
             {
-                networkPlaceholders.ForEach(p =>
+                sceneObjects.ForEach(sceneObject =>
                 {
-                    ((INetworkPlaceholder)p).InitializationId = rnd.Next(1, 99999);
-                    EditorUtility.SetDirty(p);
+                    sceneObject.UniqueID = 0;
+                });
+                sceneObjects.ForEach(sceneObject =>
+                {
+                    sceneObject.GenerateObjectUniqueID();
+                    EditorUtility.SetDirty(sceneObject);
                 });
             }
             else
@@ -73,26 +76,20 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
                 List<int> updatedIds = new List<int>();
 
                 // First of all, get distinct of all used IDs greater than 0.
-                List<int> oldIds = networkPlaceholders.Select(p => ((INetworkPlaceholder)p).InitializationId).Distinct().Where(id => id > 0).ToList();
+                List<int> oldIds = sceneObjects.Select(p => (p.UniqueID)).Distinct().Where(id => id > 0).ToList();
 
                 // Then, for each value, keep it if it is the first time it appears.
                 // Else, if it is duplicated or 0, then recalculate it with a brand new value.
-                networkPlaceholders.ForEach(p =>
+                sceneObjects.ForEach(p =>
                 {
-                    int currentId = ((INetworkPlaceholder)p).InitializationId;
+                    int currentId = (p.UniqueID);
 
                     bool needsOverride = currentId == 0 || !oldIds.Contains(currentId);
 
                     if (needsOverride)
                     {
-                        var newId = rnd.Next(1, 99999);
-                        while (oldIds.Contains(newId) || updatedIds.Contains(newId))
-                        {
-                            // Recalculate if this ID is already used!
-                            newId = rnd.Next(1, 99999);
-                        }
-
-                        ((INetworkPlaceholder)p).InitializationId = newId;
+                        p.UniqueID = 0;
+                        p.GenerateObjectUniqueID();
                         EditorUtility.SetDirty(p);
                     }
                     else
@@ -100,7 +97,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
                         oldIds.Remove(currentId);
                     }
 
-                    updatedIds.Add(((INetworkPlaceholder)p).InitializationId);
+                    updatedIds.Add((p.UniqueID));
                 });
             }
         }
@@ -116,9 +113,9 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
             {
                 Dictionary<int, string> usedCodes = new Dictionary<int, string>();
 
-                foreach (var placeholder in networkPlaceholders)
+                foreach (var objectId in sceneObjects)
                 {
-                    int tmpCode = ((INetworkPlaceholder)placeholder).InitializationId;
+                    int tmpCode = objectId.UniqueID;
 
                     string tmpCodeStr = tmpCode.ToString();
                     string tmpFeedback = string.Empty;
@@ -133,7 +130,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
                         }
                         else
                         {
-                            usedCodes.Add(tmpCode, placeholder.gameObject.name);
+                            usedCodes.Add(tmpCode, objectId.gameObject.name);
                         }
                     }
                     else
@@ -152,10 +149,10 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
 
                         if (GUILayout.Button(">", GUILayout.Width(btnWidth)))
                         {
-                            EditorGUIUtility.PingObject(placeholder.gameObject);
+                            EditorGUIUtility.PingObject(objectId.gameObject);
                         }
 
-                        EditorGUILayout.LabelField($"<b>{placeholder.gameObject.name}</b>", style, GUILayout.Width(remainingWidth * 0.4f));
+                        EditorGUILayout.LabelField($"<b>{objectId.gameObject.name}</b>", style, GUILayout.Width(remainingWidth * 0.4f));
 
                         EditorGUILayout.LabelField($"{tmpCodeStr}", style, GUILayout.Width(codeWidth));
 
