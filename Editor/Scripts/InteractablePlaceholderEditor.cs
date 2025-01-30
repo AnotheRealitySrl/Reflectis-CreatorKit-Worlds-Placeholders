@@ -2,8 +2,8 @@ using UnityEditor;
 
 using UnityEngine;
 
-using static Reflectis.SDK.Core.Interaction.ContextualMenuManageable;
-using static Reflectis.SDK.Core.Interaction.IInteractable;
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IContextualMenuManageable;
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IInteractable;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
 {

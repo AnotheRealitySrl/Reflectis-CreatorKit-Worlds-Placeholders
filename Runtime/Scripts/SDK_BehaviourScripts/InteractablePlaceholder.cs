@@ -8,10 +8,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-using static Reflectis.SDK.Core.Interaction.ContextualMenuManageable;
-using static Reflectis.SDK.Core.Interaction.GenericInteractable;
-using static Reflectis.SDK.Core.Interaction.IInteractable;
-using static Reflectis.SDK.Core.Interaction.Manipulable;
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IContextualMenuManageable;
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IInteractable;
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IManipulable;
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IVisualScriptingInteractable;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
