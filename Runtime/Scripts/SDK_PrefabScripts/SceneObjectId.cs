@@ -20,7 +20,6 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
             {
                 if (uniqueID == 0 && !string.IsNullOrEmpty(gameObject.scene.name))
                 {
-                    Debug.Log($"Unassigned Unique ID {uniqueID} to {gameObject.name} in scene {gameObject.scene.name}", gameObject);
                     GenerateObjectUniqueID();
                 }
                 return uniqueID;
@@ -42,19 +41,12 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
             if (string.IsNullOrEmpty(gameObject.scene.name))
             {
                 uniqueID = 0;
-                Debug.Log($"The object is not in scene {gameObject.name}", gameObject);
             }
             else
             {
                 if (uniqueID == 0)
                 {
-                    Debug.Log($"Generating Unique ID for {gameObject.name}", gameObject);
                     uniqueID = GenerateNewUniqueID();
-                    Debug.Log($"Assigned Unique ID {uniqueID} to {gameObject.name}", gameObject);
-                }
-                else
-                {
-                    Debug.Log($"Unique ID {uniqueID} already assigned to {gameObject.name}", gameObject);
                 }
             }
             Debug.Log($"Generated Unique ID {uniqueID} for {gameObject.name}", gameObject);
