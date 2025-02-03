@@ -31,7 +31,26 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         {
             GenerateObjectUniqueID();
         }
-
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            if (!string.IsNullOrEmpty(gameObject.scene.name))
+            {
+                foreach (var item in FindObjectsByType<SceneObjectId>(FindObjectsSortMode.None))
+                {
+                    if (item != this && item.UniqueID == UniqueID)
+                    {
+                        uniqueID = GenerateNewUniqueID();
+                        if (!Application.isPlaying)
+                        {
+                            EditorUtility.SetDirty(this);
+                        }
+                        return;
+                    }
+                }
+            }
+        }
+#endif
 
         [ContextMenu("Generate Unique ID")]
         public void GenerateObjectUniqueID()
