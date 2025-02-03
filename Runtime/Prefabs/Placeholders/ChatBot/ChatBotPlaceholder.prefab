@@ -271,7 +271,7 @@ MonoBehaviour:
   unselectOnDestroyScriptMachine: {fileID: 2764418723377441744}
   desktopAllowedStates: 5
   vrAllowedStates: 6
-  vrGenericInteraction: 1
+  vrVisualScriptingInteraction: 1
   contextualMenuOptions: 8
   contextualMenuType: 0
   OnSetupFinished:
