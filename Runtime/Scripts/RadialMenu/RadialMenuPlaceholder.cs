@@ -1,4 +1,3 @@
-using Reflectis.SDK.Core.RadialMenuUtils;
 using Reflectis.CreatorKit.Worlds.Placeholders;
 
 using System.Collections.Generic;
@@ -10,6 +9,8 @@ using UnityEditor.SceneManagement;
 #endif
 using UnityEngine;
 using UnityEngine.InputSystem;
+
+using Reflectis.CreatorKit.Worlds.Core.RadialMenu;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
