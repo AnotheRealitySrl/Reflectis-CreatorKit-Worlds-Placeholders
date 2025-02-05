@@ -1,9 +1,14 @@
 #if UNITY_EDITOR
 using UnityEditor;
+
 #endif
 using UnityEngine;
+
 using System.Collections.Generic;
+
 using Reflectis.CreatorKit.Worlds.Placeholders;
+
+using UnityEditor.SceneManagement;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
@@ -38,7 +43,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
             {
                 foreach (var item in FindObjectsByType<SceneObjectId>(FindObjectsSortMode.None))
                 {
-                    if (item != this && item.UniqueID == UniqueID)
+                    if (item != this && item.UniqueID == uniqueID)
                     {
                         uniqueID = GenerateNewUniqueID();
                         if (!Application.isPlaying)
@@ -72,7 +77,12 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 #if UNITY_EDITOR
             if (!Application.isPlaying)
             {
+                SerializedObject so = new SerializedObject(this);
+                so.FindProperty("uniqueID").intValue = uniqueID;
+                so.ApplyModifiedProperties();
+
                 EditorUtility.SetDirty(this);
+                EditorSceneManager.MarkSceneDirty(gameObject.scene);
             }
 #endif
         }
