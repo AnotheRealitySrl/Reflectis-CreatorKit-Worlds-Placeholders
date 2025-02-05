@@ -1,14 +1,14 @@
 #if UNITY_EDITOR
 using UnityEditor;
 
+using UnityEditor.SceneManagement;
+
 #endif
 using UnityEngine;
 
 using System.Collections.Generic;
 
 using Reflectis.CreatorKit.Worlds.Placeholders;
-
-using UnityEditor.SceneManagement;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
