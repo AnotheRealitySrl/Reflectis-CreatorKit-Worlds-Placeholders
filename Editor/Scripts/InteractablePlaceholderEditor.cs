@@ -2,8 +2,8 @@ using UnityEditor;
 
 using UnityEngine;
 
-using static Reflectis.SDK.Core.Interaction.ContextualMenuManageable;
-using static Reflectis.SDK.Core.Interaction.IInteractable;
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IContextualMenuManageable;
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IInteractable;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
 {
@@ -40,9 +40,9 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
                 }
             }
 
-            if (interactablePlaceholder.InteractionModes.HasFlag(EInteractableType.GenericInteractable))
+            if (interactablePlaceholder.InteractionModes.HasFlag(EInteractableType.VisualScriptingInteractable))
             {
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("vrGenericInteraction"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("vrVisualScriptingInteraction"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("lockHoverDuringInteraction"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("interactionsScriptMachine"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("needUnselectOnDestroyScriptMachine"));

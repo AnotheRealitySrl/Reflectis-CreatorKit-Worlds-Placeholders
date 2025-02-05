@@ -8,10 +8,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-using static Reflectis.SDK.Core.Interaction.ContextualMenuManageable;
-using static Reflectis.SDK.Core.Interaction.GenericInteractable;
-using static Reflectis.SDK.Core.Interaction.IInteractable;
-using static Reflectis.SDK.Core.Interaction.Manipulable;
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IContextualMenuManageable;
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IInteractable;
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IManipulable;
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IVisualScriptingInteractable;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
@@ -91,12 +91,12 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [SerializeField, Tooltip("If set to true the hover callback won't be called if the generic interactable is in a " +
             "state that is different from idle. As an example if the interactable is selected, it will keep the hover state " +
             "until the selection is over and the user is not hovering the object.")]
-        [DrawIf(nameof(interactionModes), EInteractableType.GenericInteractable)]
+        [DrawIf(nameof(interactionModes), EInteractableType.VisualScriptingInteractable)]
         private bool lockHoverDuringInteraction;
 
         [SerializeField, Tooltip("Reference to the script machine that describes what happens during interaction events." +
-            "Utilize \"GenericInteractableHoverEnter\",\"GenericInteractableHoverExit\",\"GenericInteractableSelectEnter\",\"GenericInteractableSelectExit\"" +
-            " and \"GenericInteractableInteract\" nodes to custumize your interactions")]
+            "Utilize \"VisualScriptingInteractableHoverEnter\",\"VisualScriptingInteractableHoverExit\",\"VisualScriptingInteractableSelectEnter\",\"VisualScriptingInteractableSelectExit\"" +
+            " and \"VisualScriptingInteractableInteract\" nodes to custumize your interactions")]
         private ScriptMachine interactionsScriptMachine;
 
         [SerializeField, Tooltip("Check if you need special operations to do after the object is destroyed while selected.")]
@@ -104,16 +104,16 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 
         [SerializeField, Tooltip("Reference to the script machine that describes what happens if the object is destroyed while selected." +
             "The script machine has to be assigned to a different empty gameobject! " +
-            "Utilize \"GenericInteractableUnselectOnDestroy\" node to custumize the interaction")]
+            "Utilize \"VisualScriptingInteractableUnselectOnDestroy\" node to custumize the interaction")]
         private ScriptMachine unselectOnDestroyScriptMachine;
 
         [Header("Allowed states")]
 
         [SerializeField, Tooltip("Choose which state are enabled on this object in desktop platforms.")]
-        private EAllowedGenericInteractableState desktopAllowedStates = (EAllowedGenericInteractableState)~0;
+        private EAllowedVisualScriptingInteractableState desktopAllowedStates = (EAllowedVisualScriptingInteractableState)~0;
 
         [SerializeField, Tooltip("Choose which state are enabled on this object in VR platforms.")]
-        private EAllowedGenericInteractableState vrAllowedStates = (EAllowedGenericInteractableState)~0;
+        private EAllowedVisualScriptingInteractableState vrAllowedStates = (EAllowedVisualScriptingInteractableState)~0;
 
         [HideInInspector]
         public Action<GameObject> OnSelectedActionVisualScripting;
@@ -122,14 +122,14 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public bool NeedUnselectOnDestroyScriptMachine => needUnselectOnDestroyScriptMachine;
         public ScriptMachine UnselectOnDestroyScriptMachine => unselectOnDestroyScriptMachine;
 
-        public EAllowedGenericInteractableState DesktopAllowedStates => desktopAllowedStates;
-        public EAllowedGenericInteractableState VRAllowedStates => vrAllowedStates;
+        public EAllowedVisualScriptingInteractableState DesktopAllowedStates => desktopAllowedStates;
+        public EAllowedVisualScriptingInteractableState VRAllowedStates => vrAllowedStates;
 
 
         [SerializeField, Tooltip("Enables hand and ray interaction on this object")]
-        private EVRGenericInteraction vrGenericInteraction = (EVRGenericInteraction)~0;
+        private EVRVisualScriptingInteraction vrVisualScriptingInteraction = (EVRVisualScriptingInteraction)~0;
 
-        public EVRGenericInteraction VrGenericInteraction { get => vrGenericInteraction; set => vrGenericInteraction = value; }
+        public EVRVisualScriptingInteraction VrVisualScriptingInteraction { get => vrVisualScriptingInteraction; set => vrVisualScriptingInteraction = value; }
 
         #endregion
 
