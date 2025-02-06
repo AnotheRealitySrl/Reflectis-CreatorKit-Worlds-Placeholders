@@ -11,6 +11,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 using Reflectis.CreatorKit.Worlds.Core.RadialMenu;
+using Reflectis.CreatorKit.Worlds.Core.Placeholders;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {

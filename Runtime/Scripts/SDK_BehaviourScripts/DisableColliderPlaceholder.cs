@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+
 using UnityEngine;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Reflectis.CreatorKit.Worlds.Core.Placeholders
 {
     public class DisableColliderPlaceholder : SceneComponentPlaceholderBase
     {

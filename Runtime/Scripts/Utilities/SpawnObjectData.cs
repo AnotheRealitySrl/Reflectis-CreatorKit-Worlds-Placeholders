@@ -1,4 +1,4 @@
-using Reflectis.ObjectSpawner;
+using Reflectis.CreatorKit.Worlds.Core.ObjectSpawner;
 
 using UnityEngine;
 

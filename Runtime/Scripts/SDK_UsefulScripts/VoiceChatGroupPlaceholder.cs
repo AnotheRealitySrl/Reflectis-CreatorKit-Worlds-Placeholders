@@ -1,5 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+using Reflectis.CreatorKit.Worlds.Core.Placeholders;
+
 using UnityEngine;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders

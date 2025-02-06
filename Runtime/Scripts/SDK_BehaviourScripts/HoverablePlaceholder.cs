@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using Reflectis.CreatorKit.Worlds.Core.Placeholders;
+
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
