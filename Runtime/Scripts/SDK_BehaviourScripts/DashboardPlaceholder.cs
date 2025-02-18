@@ -26,30 +26,21 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         private Transform panTransform;
 
         [SerializeField, /*Range(0.5f, 10),*/ Tooltip("The width of the screen.")]
-        [OnChangedCall(nameof(OnWidthChanged))]
-        private float dashboardWidth = 3f;
-
-        [SerializeField, /*Range(0.5f, 10),*/ Tooltip("The height of the screen.")]
-        [OnChangedCall(nameof(OnHeightChanged))]
-        private float dashboardHeight = 2f;
+        [OnChangedCall(nameof(OnScaleChanged))]
+        private float dashboardScale = 6f;
 
         public string DashboardNameFilter => dashboardNameFilter;
         public DashboardFilter Filter => filter;
         public Transform PanTransform => panTransform;
 
-        public float DashboardWidth => dashboardWidth;
-        public float DashboardHeight => dashboardHeight;
+        public float DashboardScale => dashboardScale;
 
         public string AddressableKey => addressableKey;
 
-        public void OnWidthChanged()
+        public void OnScaleChanged()
         {
-            transform.localScale = new Vector3(dashboardWidth, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(dashboardScale, dashboardScale, transform.localScale.z);
         }
 
-        public void OnHeightChanged()
-        {
-            transform.localScale = new Vector3(transform.localScale.x, dashboardHeight, transform.localScale.z);
-        }
     }
 }
