@@ -15,7 +15,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
             None
         }
 
-        [SerializeField] private string addressableKey = "EnvironmentalDashboard";
+        [SerializeField] private string addressableKey;
 
         [Header("DashboardData")]
         [SerializeField, Tooltip("Choose the type on information you want to show on the dashboard")]
