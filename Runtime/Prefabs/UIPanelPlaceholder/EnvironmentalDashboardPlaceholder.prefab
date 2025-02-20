@@ -286,7 +286,6 @@ GameObject:
   - component: {fileID: 4820774371262616293}
   - component: {fileID: 7239335496185789792}
   - component: {fileID: 6023373807199615677}
-  - component: {fileID: 9046122113525964171}
   - component: {fileID: 143047111895593419}
   m_Layer: 5
   m_Name: EnvironmentalDashboardPlaceholder
@@ -395,27 +394,6 @@ MonoBehaviour:
   dashboardNameFilter: 
   panTransform: {fileID: 4301823135775551248}
   dashboardScale: 6
---- !u!65 &9046122113525964171
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6436281814993191453}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3, y: 2, z: 0.18}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &143047111895593419
 MonoBehaviour:
   m_ObjectHideFlags: 0
