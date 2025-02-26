@@ -99,9 +99,6 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
             " and \"VisualScriptingInteractableInteract\" nodes to custumize your interactions")]
         private ScriptMachine interactionsScriptMachine;
 
-        [SerializeField, Tooltip("Check if you need special operations to do after the object is destroyed while selected.")]
-        private bool needUnselectOnDestroyScriptMachine;
-
         [SerializeField, Tooltip("Reference to the script machine that describes what happens if the object is destroyed while selected." +
             "The script machine has to be assigned to a different empty gameobject! " +
             "Utilize \"VisualScriptingInteractableUnselectOnDestroy\" node to custumize the interaction")]
@@ -119,8 +116,6 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public Action<GameObject> OnSelectedActionVisualScripting;
 
         public ScriptMachine InteractionsScriptMachine => interactionsScriptMachine;
-        public bool NeedUnselectOnDestroyScriptMachine => needUnselectOnDestroyScriptMachine;
-        public ScriptMachine UnselectOnDestroyScriptMachine => unselectOnDestroyScriptMachine;
 
         public EAllowedVisualScriptingInteractableState DesktopAllowedStates => desktopAllowedStates;
         public EAllowedVisualScriptingInteractableState VRAllowedStates => vrAllowedStates;
