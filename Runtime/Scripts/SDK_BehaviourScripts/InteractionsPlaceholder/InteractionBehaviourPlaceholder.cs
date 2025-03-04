@@ -1,9 +1,10 @@
+using Reflectis.CreatorKit.Worlds.Core.Placeholders;
 using UnityEngine;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
     [RequireComponent(typeof(InteractionPlaceholder))]
-    public abstract class InteractionBehaviourPlaceholder : SceneComponentPlaceholderNetwork
+    public abstract class InteractionBehaviourPlaceholder : SceneComponentPlaceholderBase
     {
         private InteractionPlaceholder interactionPlaceholder;
         protected InteractionPlaceholder InteractionPlaceholder

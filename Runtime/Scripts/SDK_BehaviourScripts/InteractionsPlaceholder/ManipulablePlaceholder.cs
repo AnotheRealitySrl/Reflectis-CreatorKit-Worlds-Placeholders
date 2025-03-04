@@ -35,16 +35,15 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [SerializeField, Tooltip("If specified, a dynamic attach will be generated on interaction")]
         private Transform attachTransform;
 
-        public bool DynamicAttach { get => dynamicAttach; }
-        public bool AdjustRotationOnRelease { get => adjustRotationOnRelease; }
-        public EVRInteraction VRInteraction { get => vrInteraction; }
-        public EManipulationMode ManipulationMode { get => manipulationMode; }
-        public bool RealignAxisX { get => realignAxisX; }
-        public bool RealignAxisY { get => realignAxisY; }
-        public bool RealignAxisZ { get => realignAxisZ; }
-        public float RealignDurationTimeInSeconds { get => realignDurationTimeInSeconds; }
-        public bool MouseLookAtCamera => mouseLookAtCamera;
-        public Transform AttachTransform => attachTransform;
-
+        public EManipulationMode ManipulationMode { get => manipulationMode; set => manipulationMode = value; }
+        public EVRInteraction VrInteraction { get => vrInteraction; set => vrInteraction = value; }
+        public bool DynamicAttach { get => dynamicAttach; set => dynamicAttach = value; }
+        public bool AdjustRotationOnRelease { get => adjustRotationOnRelease; set => adjustRotationOnRelease = value; }
+        public bool RealignAxisX { get => realignAxisX; set => realignAxisX = value; }
+        public bool RealignAxisY { get => realignAxisY; set => realignAxisY = value; }
+        public bool RealignAxisZ { get => realignAxisZ; set => realignAxisZ = value; }
+        public float RealignDurationTimeInSeconds { get => realignDurationTimeInSeconds; set => realignDurationTimeInSeconds = value; }
+        public bool MouseLookAtCamera { get => mouseLookAtCamera; set => mouseLookAtCamera = value; }
+        public Transform AttachTransform { get => attachTransform; set => attachTransform = value; }
     }
 }

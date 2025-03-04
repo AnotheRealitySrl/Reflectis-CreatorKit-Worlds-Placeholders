@@ -1,10 +1,11 @@
+using Reflectis.CreatorKit.Worlds.Core.Placeholders;
 using System.Collections.Generic;
 
 using UnityEngine;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
-    public class InteractionPlaceholder : SceneComponentPlaceholderNetwork
+    public class InteractionPlaceholder : SceneComponentPlaceholderBase
     {
         #region Settings
 
@@ -17,10 +18,13 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
             "until the selection is over and the user is not hovering the object.")]
         private bool lockHoverDuringInteraction = false;
 
-        public List<Collider> InteractionColliders => interactionColliders;
 
-        public bool LockHoverDuringInteraction { get; set; }
-        #endregion
+        public bool LockHoverDuringInteraction
+        {
+            get => lockHoverDuringInteraction; set { lockHoverDuringInteraction = value; }
+        }
 
+        public List<Collider> InteractionColliders { get => interactionColliders; set => interactionColliders = value; }
     }
+    #endregion
 }

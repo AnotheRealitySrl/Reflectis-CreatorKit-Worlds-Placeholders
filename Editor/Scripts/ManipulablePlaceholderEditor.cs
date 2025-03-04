@@ -11,7 +11,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
 
             EditorGUILayout.PropertyField(serializedObject.FindProperty("manipulationMode"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("vrInteraction"));
-            if (interactablePlaceholder.VRInteraction != 0)
+            if (interactablePlaceholder.VrInteraction != 0)
             {
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("dynamicAttach"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("adjustRotationOnRelease"));
