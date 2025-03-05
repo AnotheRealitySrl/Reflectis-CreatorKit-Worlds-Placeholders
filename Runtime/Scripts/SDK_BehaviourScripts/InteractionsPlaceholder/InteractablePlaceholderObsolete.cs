@@ -15,7 +15,7 @@ using static Reflectis.CreatorKit.Worlds.Core.Interaction.IVisualScriptingIntera
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
-    public class InteractablePlaceholder : SceneComponentPlaceholderNetwork
+    public class InteractablePlaceholderObsolete : SceneComponentPlaceholderNetwork
     {
         #region Shared settings
 
