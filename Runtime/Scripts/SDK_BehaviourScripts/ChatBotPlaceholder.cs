@@ -60,7 +60,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         private string instructions;
 
         [Tooltip("Select avatar voice from the available ones.")]
-        [SerializeField] private EChatBotVoice voice = EChatBotVoice.Alloy;
+        [SerializeField] private EChatBotVoice voice = EChatBotVoice.alloy;
 
         public Transform AvatarContainer => avatarContainer;
         public RectTransform ChatPanel => chatPanel;
