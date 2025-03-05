@@ -10,9 +10,6 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
             InteractionPlaceholder interactablePlaceholder = target as InteractionPlaceholder;
 
             EditorGUILayout.PropertyField(serializedObject.FindProperty("automaticSetup"));
-            // IsNetworked is a property -> <IsNetworked>k__BackingField
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("<IsNetworked>k__BackingField"));
-
             EditorGUILayout.PropertyField(serializedObject.FindProperty("interactionColliders"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("lockHoverDuringInteraction"));
 
