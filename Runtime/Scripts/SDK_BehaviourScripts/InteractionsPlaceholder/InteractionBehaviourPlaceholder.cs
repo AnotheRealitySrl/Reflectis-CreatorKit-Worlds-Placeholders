@@ -3,17 +3,17 @@ using UnityEngine;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
-    [RequireComponent(typeof(InteractionPlaceholder))]
+    [RequireComponent(typeof(InteractablePlaceholder))]
     public abstract class InteractionBehaviourPlaceholder : SceneComponentPlaceholderBase
     {
-        private InteractionPlaceholder interactionPlaceholder;
-        protected InteractionPlaceholder InteractionPlaceholder
+        private InteractablePlaceholder interactionPlaceholder;
+        protected InteractablePlaceholder InteractionPlaceholder
         {
             get
             {
                 if (interactionPlaceholder == null)
                 {
-                    interactionPlaceholder = GetComponentInChildren<InteractionPlaceholder>(true);
+                    interactionPlaceholder = GetComponentInChildren<InteractablePlaceholder>(true);
                 }
                 return interactionPlaceholder;
             }

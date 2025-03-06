@@ -12,7 +12,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
         public override void OnInspectorGUI()
         {
             ContextualMenuPlaceholder contextualMenuPlaceholder = target as ContextualMenuPlaceholder;
-            var interactablePlaceholder = contextualMenuPlaceholder.GetComponentInChildren<InteractionPlaceholder>(true);
+            var interactablePlaceholder = contextualMenuPlaceholder.GetComponentInChildren<InteractablePlaceholder>(true);
 
             EditorGUILayout.PropertyField(serializedObject.FindProperty("contextualMenuOptions"));
             if (contextualMenuPlaceholder.ContextualMenuOptions.HasFlag(EContextualMenuOption.NonProportionalScale))

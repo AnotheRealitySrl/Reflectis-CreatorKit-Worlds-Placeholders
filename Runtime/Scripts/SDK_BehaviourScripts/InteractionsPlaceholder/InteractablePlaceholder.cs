@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
-    public class InteractionPlaceholder : SceneComponentPlaceholderNetwork
+    public class InteractablePlaceholder : SceneComponentPlaceholderNetwork
     {
         #region Settings
 
