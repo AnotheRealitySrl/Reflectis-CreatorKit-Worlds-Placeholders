@@ -8,6 +8,8 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
         public override void OnInspectorGUI()
         {
             InteractionPlaceholder interactablePlaceholder = target as InteractionPlaceholder;
+            // IsNetworked is a property -> <IsNetworked>k__BackingField
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("<IsNetworked>k__BackingField"));
 
             EditorGUILayout.PropertyField(serializedObject.FindProperty("automaticSetup"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("interactionColliders"));

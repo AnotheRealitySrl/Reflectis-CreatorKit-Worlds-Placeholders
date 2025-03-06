@@ -1,11 +1,10 @@
-using Reflectis.CreatorKit.Worlds.Core.Placeholders;
 using System.Collections.Generic;
 
 using UnityEngine;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
-    public class InteractionPlaceholder : SceneComponentPlaceholderBase
+    public class InteractionPlaceholder : SceneComponentPlaceholderNetwork
     {
         #region Settings
 
@@ -25,6 +24,6 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         }
 
         public List<Collider> InteractionColliders { get => interactionColliders; set => interactionColliders = value; }
+        #endregion
     }
-    #endregion
 }
