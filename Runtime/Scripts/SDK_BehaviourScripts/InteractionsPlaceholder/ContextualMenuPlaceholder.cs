@@ -21,5 +21,16 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 
         public EContextualMenuOption ContextualMenuOptions { get => contextualMenuOptions; set => contextualMenuOptions = value; }
         #endregion
+
+        #region Options Settings
+        #region Color picker
+        public bool colorFirstMeshOnly;
+        #endregion
+
+        #region ModelExploder
+        public bool explosionMoveSubmeshes;
+        #endregion
+
+        #endregion
     }
 }

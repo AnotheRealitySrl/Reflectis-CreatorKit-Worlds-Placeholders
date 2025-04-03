@@ -47,6 +47,16 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
                 }
             }
 
+            if (contextualMenuPlaceholder.ContextualMenuOptions.HasFlag(EContextualMenuOption.ColorPicker))
+            {
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("colorFirstMeshOnly"));
+            }
+
+            if (contextualMenuPlaceholder.ContextualMenuOptions.HasFlag(EContextualMenuOption.Explodable))
+            {
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("explosionMoveSubmeshes"));
+            }
+
             serializedObject.ApplyModifiedProperties();
         }
     }
