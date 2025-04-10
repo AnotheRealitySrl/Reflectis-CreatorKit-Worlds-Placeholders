@@ -11,7 +11,7 @@ using UnityEngine.UI;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
-    public class POIPlaceholder : SceneComponentPlaceholderBase
+    public class POIPlaceholder : SceneComponentPlaceholderBase, IAddressablePlaceholder
     {
         public enum ETitleVisibility
         {
@@ -102,6 +102,8 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [SerializeField, Tooltip("Set the distance of the pan towards the POI panel")]
         [OnChangedCall(nameof(OnPanTransformChanged))]
         private float panDistance = 1f;
+
+        public string AddressableKey => "POIController";
 
 
         public RectTransform Activator => activator;
