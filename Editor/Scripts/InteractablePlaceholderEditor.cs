@@ -45,12 +45,6 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("vrVisualScriptingInteraction"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("lockHoverDuringInteraction"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("interactionsScriptMachine"));
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("needUnselectOnDestroyScriptMachine"));
-
-                if (interactablePlaceholder.NeedUnselectOnDestroyScriptMachine)
-                {
-                    EditorGUILayout.PropertyField(serializedObject.FindProperty("unselectOnDestroyScriptMachine"));
-                }
 
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("desktopAllowedStates"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("vrAllowedStates"));
