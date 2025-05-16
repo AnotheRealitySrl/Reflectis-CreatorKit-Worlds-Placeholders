@@ -10,8 +10,8 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public enum DashboardFilter
         {
             Environment,
-            Category,
-            Tag,
+            Tags,
+            NoFilter,
             None
         }
 
