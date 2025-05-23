@@ -3,6 +3,7 @@ using ReadyPlayerMe.Core;
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 
 using UnityEngine;
 
@@ -218,8 +219,8 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
                 await Task.Yield();
             }
 
-            if(ctx.IsCancellationRequested) return;
-            
+            if (ctx.IsCancellationRequested) return;
+
             if (Application.HasUserAuthorization(UserAuthorization.Microphone))
             {
                 InitializeAudio();

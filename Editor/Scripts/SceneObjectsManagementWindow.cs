@@ -16,7 +16,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
 
         private Vector2 scrollPosition = Vector2.zero;
 
-        [MenuItem("Reflectis/Scene Objects management")]
+        [MenuItem("Reflectis Worlds/Creator Kit/Core/Scene Objects management")]
         public static void ShowWindow()
         {
             //Show existing window instance. If one doesn't exist, make one.
