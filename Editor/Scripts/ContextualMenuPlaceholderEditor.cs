@@ -57,6 +57,11 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("explosionMoveSubmeshes"));
             }
 
+            if (contextualMenuPlaceholder.ContextualMenuOptions.HasFlag(EContextualMenuOption.LockTransform))
+            {
+                EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(contextualMenuPlaceholder.useSubmeshesOnLock)));
+            }
+
             serializedObject.ApplyModifiedProperties();
         }
     }
