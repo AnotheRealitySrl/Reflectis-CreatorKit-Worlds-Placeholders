@@ -12,7 +12,11 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
             EditorGUILayout.PropertyField(serializedObject.FindProperty("<IsNetworked>k__BackingField"));
 
             EditorGUILayout.PropertyField(serializedObject.FindProperty("automaticSetup"));
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("interactionColliders"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("interactWithColliders"));
+            if (interactablePlaceholder.InteractWithColliders)
+            {
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("interactionColliders"));
+            }
             EditorGUILayout.PropertyField(serializedObject.FindProperty("lockHoverDuringInteraction"));
 
             serializedObject.ApplyModifiedProperties();
