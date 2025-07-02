@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using static Reflectis.CreatorKit.Worlds.Core.Interaction.IManipulable;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
@@ -35,6 +36,9 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [SerializeField, Tooltip("If specified, a dynamic attach will be generated on interaction")]
         private Transform attachTransform;
 
+        [SerializeField, Tooltip("Event called when the manipulable state changes")]
+        public UnityEvent<EManipulableState> onManipulationStateChange;
+
         public EManipulationMode ManipulationMode { get => manipulationMode; set => manipulationMode = value; }
         public EVRInteraction VrInteraction { get => vrInteraction; set => vrInteraction = value; }
         public bool DynamicAttach { get => dynamicAttach; set => dynamicAttach = value; }
@@ -45,5 +49,6 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public float RealignDurationTimeInSeconds { get => realignDurationTimeInSeconds; set => realignDurationTimeInSeconds = value; }
         public bool MouseLookAtCamera { get => mouseLookAtCamera; set => mouseLookAtCamera = value; }
         public Transform AttachTransform { get => attachTransform; set => attachTransform = value; }
+        public UnityEvent<EManipulableState> OnCurrentStateChange { get => onManipulationStateChange; }
     }
 }
