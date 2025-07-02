@@ -13,7 +13,10 @@ GameObject:
   - component: {fileID: 2979425897188524765}
   - component: {fileID: 2837758083693131841}
   - component: {fileID: 5250353791647015000}
-  - component: {fileID: 1340468070222211385}
+  - component: {fileID: -679962397215439625}
+  - component: {fileID: 376614193460831256}
+  - component: {fileID: 8162256357600398703}
+  - component: {fileID: 8441124486405569469}
   m_Layer: 0
   m_Name: Interactable
   m_TagString: Untagged
@@ -123,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueID: 1460948165
---- !u!114 &1340468070222211385
+--- !u!114 &-679962397215439625
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,14 +135,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 7711471337505200047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 309c16a3ce05273478099b7fe6faab66, type: 3}
+  m_Script: {fileID: 11500000, guid: ca6b7c0dfe18a8044a728cd73d0a69a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   automaticSetup: 1
   <IsNetworked>k__BackingField: 0
+  interactWithColliders: 1
   interactionColliders:
   - {fileID: 2837758083693131841}
-  interactionModes: -1
+  lockHoverDuringInteraction: 0
+--- !u!114 &376614193460831256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7711471337505200047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d1f0b84334ccb44a95b8462835e3b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  automaticSetup: 1
+  contextualMenuOptions: 8
+  colorFirstMeshOnly: 0
+  explosionMoveSubmeshes: 0
+  useSubmeshesOnLock: 1
+--- !u!114 &8162256357600398703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7711471337505200047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c63b9aeea85eb846bdf3f8828cade67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  automaticSetup: 1
   manipulationMode: -1
   vrInteraction: -1
   dynamicAttach: 0
@@ -150,15 +184,20 @@ MonoBehaviour:
   realignDurationTimeInSeconds: 1
   mouseLookAtCamera: 0
   attachTransform: {fileID: 0}
-  lockHoverDuringInteraction: 0
+--- !u!114 &8441124486405569469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7711471337505200047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710a7f3a1f5169c4190ec0c12daeac19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  automaticSetup: 1
   interactionsScriptMachine: {fileID: 0}
-  needUnselectOnDestroyScriptMachine: 0
-  unselectOnDestroyScriptMachine: {fileID: 0}
   desktopAllowedStates: -1
   vrAllowedStates: -1
   vrVisualScriptingInteraction: -1
-  contextualMenuOptions: 8
-  contextualMenuType: 0
-  OnSetupFinished:
-    m_PersistentCalls:
-      m_Calls: []

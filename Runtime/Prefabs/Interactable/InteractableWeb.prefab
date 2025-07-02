@@ -71,7 +71,17 @@ PrefabInstance:
     - target: {fileID: 7711471337505200047, guid: cf8b58650a75cae4991cc6e84c7adccb,
         type: 3}
       propertyPath: m_Name
-      value: Interactable Variant
+      value: InteractableWeb
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162256357600398703, guid: cf8b58650a75cae4991cc6e84c7adccb,
+        type: 3}
+      propertyPath: vrInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441124486405569469, guid: cf8b58650a75cae4991cc6e84c7adccb,
+        type: 3}
+      propertyPath: vrVisualScriptingInteraction
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

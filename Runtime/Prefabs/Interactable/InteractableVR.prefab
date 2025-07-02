@@ -8,6 +8,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 399919982235301499, guid: c0d3bd204ea05c74abf2758384c2bbca,
+        type: 3}
+      propertyPath: vrAllowedStates
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 399919982235301499, guid: c0d3bd204ea05c74abf2758384c2bbca,
+        type: 3}
+      propertyPath: desktopAllowedStates
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1994125649721399913, guid: c0d3bd204ea05c74abf2758384c2bbca,
         type: 3}
       propertyPath: m_Name
@@ -87,6 +97,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8471878347450968542, guid: c0d3bd204ea05c74abf2758384c2bbca,
+        type: 3}
+      propertyPath: contextualMenuOptions
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
