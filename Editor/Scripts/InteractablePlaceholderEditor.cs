@@ -7,12 +7,12 @@ using static Reflectis.CreatorKit.Worlds.Core.Interaction.IInteractable;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
 {
-    [CustomEditor(typeof(InteractablePlaceholder))]
+    [CustomEditor(typeof(InteractablePlaceholderObsolete))]
     public class InteractablePlaceholderEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
         {
-            InteractablePlaceholder interactablePlaceholder = target as InteractablePlaceholder;
+            InteractablePlaceholderObsolete interactablePlaceholder = target as InteractablePlaceholderObsolete;
 
             EditorGUILayout.PropertyField(serializedObject.FindProperty("automaticSetup"));
             // IsNetworked is a property -> <IsNetworked>k__BackingField
