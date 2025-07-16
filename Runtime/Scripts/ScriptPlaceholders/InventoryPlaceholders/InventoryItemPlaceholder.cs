@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
-    public class InventoryItemPlaceholder : SceneComponentPlaceholderBase
+    public class InventoryItemPlaceholder : SceneComponentPlaceholderBase, IAddressablePlaceholder
     {
         [Tooltip("The name of the item")]
         public string itemName; //Name of the item
@@ -17,6 +17,8 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 
         [Tooltip("The icon used to display the item in the menu")]
         public Sprite icon; //The icon to display in the inventory
+
+        public virtual string AddressableKey => itemName;
     }
 
 #if UNITY_EDITOR
