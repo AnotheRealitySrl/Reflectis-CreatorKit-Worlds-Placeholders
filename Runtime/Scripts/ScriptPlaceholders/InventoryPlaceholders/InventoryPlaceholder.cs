@@ -14,7 +14,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         }*/
 
         [Tooltip("The list of the items that are already inside the menu")]
-        public List<InventoryItemPlaceholder> inventoryItems; //list of the scriptable objects describing the inventory items
+        public List<GameObject> inventoryItems; //list of the scriptable objects describing the inventory items
 
         [Tooltip("The distance offset of the radialMenu from the camera")]
         public float zOffset = 1f;
