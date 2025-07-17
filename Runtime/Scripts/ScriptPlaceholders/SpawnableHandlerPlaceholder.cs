@@ -32,7 +32,6 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
                 }
             }
         }
-#endif
 
         private SpawnableObjectListData LoadOrCreateData()
         {
@@ -52,5 +51,8 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 
             return spawnableList;
         }
+#endif
+
+
     }
 }
