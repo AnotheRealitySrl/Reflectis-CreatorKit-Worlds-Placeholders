@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
-    public class InventoryPlaceholder : SceneComponentPlaceholderBase
+    public class InventoryPlaceholder : SpawnableHandlerPlaceholder
     {
         /*public enum EInventoryLayout
         {
