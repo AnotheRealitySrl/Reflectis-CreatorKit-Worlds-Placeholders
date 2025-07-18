@@ -28,7 +28,9 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
-            DrawDefaultInspector();
+            //DrawDefaultInspector();
+            DrawPropertiesExcluding(serializedObject, "IsNetworked", "<IsNetworked>k__BackingField");
+            SerializedProperty networked = serializedObject.FindProperty("<IsNetworked>k__BackingField");
 
             // Draw the "consumable" field
             SerializedProperty consumableProp = serializedObject.FindProperty("consumable");
@@ -39,6 +41,8 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
                 SerializedProperty usesProp = serializedObject.FindProperty("numberOfUses");
                 EditorGUILayout.PropertyField(usesProp);
             }
+
+            networked.boolValue = true;
 
             serializedObject.ApplyModifiedProperties();
         }
