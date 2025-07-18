@@ -19,6 +19,11 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 #if UNITY_EDITOR
         private void OnValidate()
         {
+            if (Application.isPlaying || EditorApplication.isPlayingOrWillChangePlaymode)
+            {
+                return;
+            }
+
             if (!string.IsNullOrEmpty(gameObject.scene.name))
             {
                 SpawnableObjectListData spawnList = LoadOrCreateData();
