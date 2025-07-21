@@ -1,6 +1,6 @@
 using Reflectis.CreatorKit.Worlds.Core.Placeholders;
-using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
@@ -12,7 +12,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [Tooltip("The collider in the scene that is triggered when the inventory item enters its space")]
         public Collider[] detectorCollider; 
 
-        public Action OnItemTriggerEnter;
-        public Action OnItemTriggerExit;
+        public UnityEvent OnItemTriggerEnter;
+        public UnityEvent OnItemTriggerExit;
     }
 }
