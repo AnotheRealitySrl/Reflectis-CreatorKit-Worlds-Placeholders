@@ -18,6 +18,9 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [Tooltip("The icon used to display the item in the menu")]
         public Sprite icon; //The icon to display in the inventory
 
+        [Tooltip("The colliders that have interaction logic (example.: Trigger detector colliders)")]
+        public Collider[] interactingColliders;
+
         public virtual string AddressableKey => itemName;
     }
 
