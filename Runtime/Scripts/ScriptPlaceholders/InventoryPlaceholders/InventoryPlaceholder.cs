@@ -16,13 +16,13 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public List<InventoryItemPlaceholder> inventoryItems; //list of the scriptable objects describing the inventory items
 
         [Tooltip("The distance offset of the radialMenu from the camera")]
-        public float zOffset = 1f;
+        public float zOffset = 0.8f;
 
         [Tooltip("The distance offset of the radialMenu on the y axis")]
         public float yOffset = 1.15f;
 
         [Tooltip("The radius that the items are going to use when opening the radialMenu")]
-        public float radius = 300f;
+        public float radius = 0.3f;
 
         [Tooltip("The speed with which the radialMenu will be opened")]
         public float openSpeed = 1f;
