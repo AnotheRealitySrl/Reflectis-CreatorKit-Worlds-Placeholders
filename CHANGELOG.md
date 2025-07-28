@@ -1,5 +1,24 @@
 # Release notes
 
+## v2.0.0
+
+### Changed
+
+- Revised `InteractablePlaceholder` structure: 
+  now there are three additional scripts `Manipulable`, `VisualScriptingInteractablePlaceholder` and `ContextualMenuPlaceholder`.
+- Changed `DashboardFilter` values in `DashboardPlaceholder`.
+
+### Added
+
+- Added option in `ContextualMenuPlaceholder`.
+- Added `ScriptDefineSysmbols` utility class to addin the string "REFLECTIS_CREATOR_KIT_WORLDS_PLACEHOLDERS".
+- Added non collider option in `InteractablePlaceholder`.
+
+### Fixed 
+
+- Fixed minor issue in `POIPlaceholder`.
+- Fixed minor issue in `CustomRPMVoiceHandler`.
+
 ## v1.1.0
 
 ### Added
