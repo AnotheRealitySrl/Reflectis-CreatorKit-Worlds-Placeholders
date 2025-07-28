@@ -14,6 +14,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 
         [Tooltip("Whether or not only a specific collider of the inventory item can trigger. Leave to false if all the colliders can trigger the detector")]
         public bool handleSpecificColliderPosition = false;
+        [Tooltip("The position in the list of interacting colliders of the item placeholder's collider")]
         [HideInInspector] public int colliderTriggerIndex = -1;
 
         [Tooltip("The collider in the scene that is triggered when the inventory item enters its space")]
