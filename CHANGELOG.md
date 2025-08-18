@@ -1,10 +1,16 @@
 # Release notes
 
+## v2.0.1
+
+### Fixed
+
+- Remove unnecessary script `CustomRPMVoiceHandler` which included a wrong dependency to RPM package.
+
 ## v2.0.0
 
 ### Changed
 
-- Revised `InteractablePlaceholder` structure: 
+- Revised `InteractablePlaceholder` structure:
   now there are three additional scripts `Manipulable`, `VisualScriptingInteractablePlaceholder` and `ContextualMenuPlaceholder`.
 - Changed `DashboardFilter` values in `DashboardPlaceholder`.
 
@@ -14,7 +20,7 @@
 - Added `ScriptDefineSysmbols` utility class to addin the string "REFLECTIS_CREATOR_KIT_WORLDS_PLACEHOLDERS".
 - Added non collider option in `InteractablePlaceholder`.
 
-### Fixed 
+### Fixed
 
 - Fixed minor issue in `POIPlaceholder`.
 - Fixed minor issue in `CustomRPMVoiceHandler`.
@@ -30,7 +36,7 @@
 - Fixed `POIPlaceholder` initialization.
 - Improved `EnvironmentalDashboard`, `POIPlaceholder` and `ChatBotPlaceholders` to simplify their structure.
 
-### Removed 
+### Removed
 
 - Removed `UnselectOnDestroy` reference from `InteractablePlaceholder`, since now the unselection on destroy is managed automatically.
 
