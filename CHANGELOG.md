@@ -1,5 +1,12 @@
 # Release notes
 
+## v2.1.0
+
+### Added
+
+- Added inventory placeholders.
+- Add flag to select tenant envs in `CSceneChangerPlaceholder`.
+
 ## v2.0.1
 
 ### Fixed
