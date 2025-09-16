@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
-    public class ChatbotPlaceholderBase : SceneComponentPlaceholderBase
+    public abstract class ChatbotPlaceholderBase : SceneComponentPlaceholderBase
     {
         [Header("Chatbot structure.\n" +
              "Do not modify it, unless you need to create custom avatars.")]
