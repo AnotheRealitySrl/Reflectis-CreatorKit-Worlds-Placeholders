@@ -35,15 +35,6 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [Tooltip("This will be the name of the avatar, displayed in the chat panel.")]
         [SerializeField] private string chatbotName = "ChatBot";
 
-        [Tooltip("Select this if the conversation with the chatbot should start automatically, " +
-            "without waiting for the user to send the first input.")]
-        [SerializeField] private bool startTheConversation = true;
-
-        [DrawIf(nameof(startTheConversation), true)]
-        [Tooltip("The initial sentence that is used by the user to start the conversation. " +
-            "This will be sent \"under the hood\" to the chatbot, and will not be displayed in the UI.")]
-        [SerializeField] private string initialConversationSentence;
-
         [SerializeField, TextArea(10, 30)]
         [Tooltip("Specify here the behaviour of the chatbot, in natural language.")]
         private string instructions;
@@ -52,8 +43,6 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [SerializeField] private EChatBotVoice voice = EChatBotVoice.alloy;
 
         public string ChatbotName => chatbotName;
-        public bool StartTheConversation => startTheConversation;
-        public string InitialConversationSentence => initialConversationSentence;
         public string Instructions => instructions;
         public EChatBotVoice Voice => voice;
     }

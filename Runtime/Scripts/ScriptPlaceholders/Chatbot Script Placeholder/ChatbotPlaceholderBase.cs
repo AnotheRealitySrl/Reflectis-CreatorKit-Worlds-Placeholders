@@ -1,4 +1,5 @@
 using Reflectis.CreatorKit.Worlds.Core.Placeholders;
+using Reflectis.SDK.Core.Utilities;
 
 using UnityEngine;
 using UnityEngine.Events;
@@ -16,10 +17,22 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
             "Specify the animator in the case the avatar in use has multiple animators in the hierarchy.")]
         [SerializeField] protected Animator animator;
 
+        [Tooltip("Select this if the conversation with the chatbot should start automatically, " +
+            "without waiting for the user to send the first input.")]
+        [SerializeField] private bool startTheConversation = true;
+
+        [DrawIf(nameof(startTheConversation), true)]
+        [Tooltip("The initial sentence that is used by the user to start the conversation. " +
+            "This will be sent \"under the hood\" to the chatbot, and will not be displayed in the UI.")]
+        [SerializeField] private string initialConversationSentence;
+
 
         public Transform AvatarContainer => avatarContainer;
         public RectTransform ChatPanel => chatPanel;
         public Animator Animator => animator;
+
+        public bool StartTheConversation => startTheConversation;
+        public string InitialConversationSentence => initialConversationSentence;
 
         public UnityEvent OnChatBotSelect { get; } = new();
         public UnityEvent OnChatBotUnselected { get; } = new();
