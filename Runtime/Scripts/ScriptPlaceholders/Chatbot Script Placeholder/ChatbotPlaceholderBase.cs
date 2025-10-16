@@ -17,6 +17,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
             "Specify the animator in the case the avatar in use has multiple animators in the hierarchy.")]
         [SerializeField] protected Animator animator;
 
+        [Header("Chatbot parameters")]
         [Tooltip("Select this if the conversation with the chatbot should start automatically, " +
             "without waiting for the user to send the first input.")]
         [SerializeField] private bool startTheConversation = true;
