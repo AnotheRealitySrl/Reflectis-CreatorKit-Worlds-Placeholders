@@ -1,5 +1,11 @@
 # Release notes
 
+## v2.2.0
+
+### Added
+
+- Added `ReflectisChatbotPlaceholder` for chatbot with RAG.
+
 ## v2.1.0
 
 ### Added
