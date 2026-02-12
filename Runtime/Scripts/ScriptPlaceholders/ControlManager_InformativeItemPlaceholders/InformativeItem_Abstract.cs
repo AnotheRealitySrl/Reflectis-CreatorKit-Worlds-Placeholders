@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Reflectis
+namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
     public abstract class InformativeItem_Abstract : MonoBehaviour
     {

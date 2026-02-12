@@ -1,9 +1,7 @@
-using NUnit.Framework;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
-namespace Reflectis.CreatorKit.Worlds.Core
+namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
     public class Informative_Highlight : MonoBehaviour
     {

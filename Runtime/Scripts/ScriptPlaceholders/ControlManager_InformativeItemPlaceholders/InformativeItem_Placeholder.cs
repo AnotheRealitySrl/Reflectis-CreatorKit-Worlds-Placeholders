@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-namespace Reflectis
+namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
     public class InformativeItem_Placeholder : InformativeItem_Abstract
     {

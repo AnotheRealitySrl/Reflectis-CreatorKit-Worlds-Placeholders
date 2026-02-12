@@ -1,5 +1,5 @@
 using UnityEngine;
-namespace Reflectis
+namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
     public enum InformativeHighlightEnum
     {
