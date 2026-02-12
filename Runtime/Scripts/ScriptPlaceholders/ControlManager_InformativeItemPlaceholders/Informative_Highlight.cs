@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
@@ -24,7 +25,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         ///////////////////////////////////////////////////////////////////////////////////
         public void Highlight(int index)
         {
-            foreach (var kvp in materialMap)
+            /*foreach (var kvp in materialMap)
             {
                 MeshRenderer renderer = kvp.Key;
                 if (renderer == null) continue;
@@ -39,17 +40,31 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
                 }
 
                 renderer.sharedMaterials = swapArray;
+            }*/
+            foreach (MeshRenderer meshRenderer in GetComponentsInChildren<MeshRenderer>(true))
+            {
+                List<Material> materials = meshRenderer.sharedMaterials.ToList();
+                materials.Remove(highlightMaterial[index]);
+                materials.Add(highlightMaterial[index]);
+                meshRenderer.sharedMaterials = materials.ToArray();
             }
         }
 
         public void ResetMaterials()
         {
-            foreach (var kvp in materialMap)
+            /*foreach (var kvp in materialMap)
             {
                 if (kvp.Key != null)
                 {
                     kvp.Key.sharedMaterials = kvp.Value;
                 }
+            }*/
+            foreach (MeshRenderer meshRenderer in GetComponentsInChildren<MeshRenderer>(true))
+            {
+                List<Material> materials = meshRenderer.sharedMaterials.ToList();
+                materials.Remove(highlightMaterial[0]);
+                materials.Remove(highlightMaterial[1]);
+                meshRenderer.sharedMaterials = materials.ToArray();
             }
         }
     }
