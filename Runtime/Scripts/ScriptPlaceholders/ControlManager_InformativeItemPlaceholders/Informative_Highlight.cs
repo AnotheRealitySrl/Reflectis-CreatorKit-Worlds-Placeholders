@@ -6,7 +6,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
     public class Informative_Highlight : MonoBehaviour
     {
         [SerializeField]
-        private Material highlightMaterial = default;
+        private Material[] highlightMaterial = default;
 
         private Dictionary<MeshRenderer, Material[]> materialMap = new Dictionary<MeshRenderer, Material[]>();
 
@@ -21,61 +21,28 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
             }
         }
 
-        ///////////////////////////////////////////////////////////////////////////
-        private void OnEnable()
+        ///////////////////////////////////////////////////////////////////////////////////
+        public void Highlight(int index)
         {
-            Highlight(true);
-        }
-
-        ///////////////////////////////////////////////////////////////////////////
-        private void OnDisable()
-        {
-            Highlight(false);
-        }
-
-        ///////////////////////////////////////////////////////////////////////////
-        private void Highlight(bool enabled)
-        {
-            /*foreach (MeshRenderer meshRenderer in GetComponentsInChildren<MeshRenderer>(true))
+            foreach (var kvp in materialMap)
             {
-                Material[] swapArray = new Material[meshRenderer.sharedMaterials.Length];
-                for (int i = 0; i < swapArray.Length; i++)
-                {
-                    swapArray[i] = highlightMaterial;
-                }
-                if(enabled)
-                    meshRenderer.sharedMaterials = swapArray;
-                else
-                {
-                    ResetMaterials();
-                }
-            }*/
-            if (enabled)
-            {
-                foreach (var kvp in materialMap)
-                {
-                    MeshRenderer renderer = kvp.Key;
-                    if (renderer == null) continue;
+                MeshRenderer renderer = kvp.Key;
+                if (renderer == null) continue;
 
-                    // Create an array matching the sub-mesh count
-                    int materialCount = kvp.Value.Length;
-                    Material[] swapArray = new Material[materialCount];
+                // Create an array matching the sub-mesh count
+                int materialCount = kvp.Value.Length;
+                Material[] swapArray = new Material[materialCount];
 
-                    for (int i = 0; i < materialCount; i++)
-                    {
-                        swapArray[i] = highlightMaterial;
-                    }
-
-                    renderer.sharedMaterials = swapArray;
+                for (int i = 0; i < materialCount; i++)
+                {
+                    swapArray[i] = highlightMaterial[index];
                 }
-            }
-            else
-            {
-                ResetMaterials();
+
+                renderer.sharedMaterials = swapArray;
             }
         }
 
-        private void ResetMaterials()
+        public void ResetMaterials()
         {
             foreach (var kvp in materialMap)
             {
