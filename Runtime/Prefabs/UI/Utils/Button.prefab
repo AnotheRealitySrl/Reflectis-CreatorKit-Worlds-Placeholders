@@ -202,8 +202,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Inizia
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e04663ca574060b408364d0246b3b47a, type: 2}
-  m_sharedMaterial: {fileID: -7888873531524841454, guid: e04663ca574060b408364d0246b3b47a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cbc969f1df63a3942b30321b60590790, type: 2}
+  m_sharedMaterial: {fileID: -7337024400575987422, guid: cbc969f1df63a3942b30321b60590790,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
