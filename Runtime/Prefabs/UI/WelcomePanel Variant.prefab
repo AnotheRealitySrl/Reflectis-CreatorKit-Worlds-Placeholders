@@ -309,7 +309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6176931856807236341}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PanTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,6 +632,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WelcomePanel Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209794067683926341, guid: c9d245c2552851a4b8816b345bcc05e6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8209794067683926341, guid: c9d245c2552851a4b8816b345bcc05e6,
         type: 3}
