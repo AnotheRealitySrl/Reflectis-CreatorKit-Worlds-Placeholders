@@ -186,6 +186,66 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 
         #endregion
 
+        #region Quiz Text Size
+
+        [Header("Text size settings")]
+
+        [SerializeField]
+        private bool showTextSizeSettings = false;
+
+        [DrawIf(nameof(showTextSizeSettings), true)]
+        [SerializeField, Tooltip("TEST")]
+        private bool overrideHeaderTextSize = false;
+
+        [DrawIf(nameof(overrideHeaderTextSize), true)]
+        [SerializeField, Tooltip("TEST")]
+        private float headerSizeValue = 0.25f;
+
+        [DrawIf(nameof(overrideHeaderTextSize), true)]
+        [SerializeField]
+        private bool headerAutoSize = false;
+
+
+        [DrawIf(nameof(showTextSizeSettings), true)]
+        [SerializeField, Tooltip("TEST")]
+        private bool overrideTitleTextSize = false;
+
+        [DrawIf(nameof(overrideTitleTextSize), true)]
+        [SerializeField, Tooltip("TEST")]
+        private float titleSizeValue = 0.35f;
+
+        [DrawIf(nameof(overrideTitleTextSize), true)]
+        [SerializeField]
+        private bool titleAutoSize = false;
+
+
+        [DrawIf(nameof(showTextSizeSettings), true)]
+        [SerializeField, Tooltip("TEST")]
+        private bool overrideDescriptionTextSize = false;
+
+        [DrawIf(nameof(overrideDescriptionTextSize), true)]
+        [SerializeField, Tooltip("TEST")]
+        private float descriptionSizeValue = 0.25f;
+
+        [DrawIf(nameof(overrideDescriptionTextSize), true)]
+        [SerializeField]
+        private bool descriptionAutoSize = false;
+
+
+        [DrawIf(nameof(showTextSizeSettings), true)]
+        [SerializeField, Tooltip("TEST")]
+        private bool overrideQuestionTextSize = false;
+
+        [DrawIf(nameof(overrideQuestionTextSize), true)]
+        [SerializeField, Tooltip("TEST")]
+        private float questionSizeValue = 0.25f;
+
+        [DrawIf(nameof(overrideQuestionTextSize), true)]
+        [SerializeField]
+        private bool questionAutoSize = false;
+
+        #endregion
+
         [Header("Quiz details")]
 
         [SerializeField, TextArea]
@@ -288,6 +348,21 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public Transform ContentTransform => contentTransform;
         public Transform PanelTransform => panelTransform;
         public Transform CameraPanTransform => cameraPanTransform;
+
+        // Text size override properties
+        public bool OverrideHeaderTextSize => overrideHeaderTextSize;
+        public float HeaderSizeValue => headerSizeValue;
+        public bool HeaderAutoSize => headerAutoSize;
+        public bool OverrideTitleTextSize => overrideTitleTextSize;
+        public float TitleSizeValue => titleSizeValue;
+        public bool TitleAutoSize => titleAutoSize;
+        public bool OverrideDescriptionTextSize => overrideDescriptionTextSize;
+        public float DescriptionSizeValue => descriptionSizeValue;
+        public bool DescriptionAutoSize => descriptionAutoSize;
+        public bool OverrideQuestionTextSize => overrideQuestionTextSize;
+        public float QuestionSizeValue => questionSizeValue;
+        public bool QuestionAutoSize => questionAutoSize;
+
         public string HeaderLabel => headerLabel.Trim(); // Removes white spaces at start and end of the string.
         public string TitleLabel => titleLabel.Trim(); // Removes white spaces at start and end of the string.
         public string DescriptionLabel => descriptionLabel.Trim(); // Removes white spaces at start and end of the string.
