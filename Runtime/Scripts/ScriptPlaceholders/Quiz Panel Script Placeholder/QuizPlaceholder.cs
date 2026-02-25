@@ -190,11 +190,11 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 
         [Header("Text size settings")]
 
-        [SerializeField]
-        private bool showTextSizeSettings = false;
+        //[SerializeField]
+        //private bool showTextSizeSettings = false;
 
-        [DrawIf(nameof(showTextSizeSettings), true)]
-        [SerializeField, Tooltip("TEST")]
+        //[DrawIf(nameof(showTextSizeSettings), true)]
+        [SerializeField, Tooltip("Overrides font size for Header field in the quiz panel")]
         private bool overrideHeaderTextSize = false;
 
         [DrawIf(nameof(overrideHeaderTextSize), true)]
@@ -206,8 +206,8 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         private bool headerAutoSize = false;
 
 
-        [DrawIf(nameof(showTextSizeSettings), true)]
-        [SerializeField, Tooltip("TEST")]
+        //[DrawIf(nameof(showTextSizeSettings), true)]
+        [SerializeField, Tooltip("Overrides font size for Title field in the quiz panel")]
         private bool overrideTitleTextSize = false;
 
         [DrawIf(nameof(overrideTitleTextSize), true)]
@@ -219,8 +219,8 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         private bool titleAutoSize = false;
 
 
-        [DrawIf(nameof(showTextSizeSettings), true)]
-        [SerializeField, Tooltip("TEST")]
+        //[DrawIf(nameof(showTextSizeSettings), true)]
+        [SerializeField, Tooltip("Overrides font size for Description field in the quiz panel")]
         private bool overrideDescriptionTextSize = false;
 
         [DrawIf(nameof(overrideDescriptionTextSize), true)]
@@ -232,8 +232,8 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         private bool descriptionAutoSize = false;
 
 
-        [DrawIf(nameof(showTextSizeSettings), true)]
-        [SerializeField, Tooltip("TEST")]
+        //[DrawIf(nameof(showTextSizeSettings), true)]
+        [SerializeField, Tooltip("Overrides font size for Question field in the quiz panel")]
         private bool overrideQuestionTextSize = false;
 
         [DrawIf(nameof(overrideQuestionTextSize), true)]
@@ -243,6 +243,18 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [DrawIf(nameof(overrideQuestionTextSize), true)]
         [SerializeField]
         private bool questionAutoSize = false;
+
+        //[DrawIf(nameof(showTextSizeSettings), true)]
+        [SerializeField, Tooltip("Overrides font size for results feedback field in the quiz panel")]
+        private bool overrideFeedbacksTextSize = false;
+
+        [DrawIf(nameof(overrideFeedbacksTextSize), true)]
+        [SerializeField, Tooltip("TEST")]
+        private float feedbacksSizeValue = 0.25f;
+
+        [DrawIf(nameof(overrideFeedbacksTextSize), true)]
+        [SerializeField]
+        private bool feedbacksAutoSize = false;
 
         #endregion
 
@@ -362,6 +374,9 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public bool OverrideQuestionTextSize => overrideQuestionTextSize;
         public float QuestionSizeValue => questionSizeValue;
         public bool QuestionAutoSize => questionAutoSize;
+        public bool OverrideFeedbacksTextSize => overrideFeedbacksTextSize;
+        public float FeedbacksSizeValue => feedbacksSizeValue;
+        public bool FeedbacksAutoSize => feedbacksAutoSize;
 
         public string HeaderLabel => headerLabel.Trim(); // Removes white spaces at start and end of the string.
         public string TitleLabel => titleLabel.Trim(); // Removes white spaces at start and end of the string.
