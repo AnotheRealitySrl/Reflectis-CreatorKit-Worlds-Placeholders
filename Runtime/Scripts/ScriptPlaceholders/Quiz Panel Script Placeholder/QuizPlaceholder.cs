@@ -256,6 +256,18 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [SerializeField]
         private bool feedbacksAutoSize = false;
 
+        //[DrawIf(nameof(showTextSizeSettings), true)]
+        [SerializeField, Tooltip("Overrides font size for answers' title field")]
+        private bool overrideAnswerTitleTextSize = false;
+
+        [DrawIf(nameof(overrideAnswerTitleTextSize), true)]
+        [SerializeField, Tooltip("TEST")]
+        private float answerTitleSizeValue = 0.25f;
+
+        [DrawIf(nameof(overrideAnswerTitleTextSize), true)]
+        [SerializeField]
+        private bool answerTitleAutoSize = false;
+
         #endregion
 
         [Header("Quiz details")]
@@ -377,6 +389,9 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public bool OverrideFeedbacksTextSize => overrideFeedbacksTextSize;
         public float FeedbacksSizeValue => feedbacksSizeValue;
         public bool FeedbacksAutoSize => feedbacksAutoSize;
+        public bool OverrideAnswerTitleTextSize => overrideAnswerTitleTextSize;
+        public float AnswerTitleSizeValue => answerTitleSizeValue;
+        public bool AnswerTitleAutoSize => answerTitleAutoSize;
 
         public string HeaderLabel => headerLabel.Trim(); // Removes white spaces at start and end of the string.
         public string TitleLabel => titleLabel.Trim(); // Removes white spaces at start and end of the string.
