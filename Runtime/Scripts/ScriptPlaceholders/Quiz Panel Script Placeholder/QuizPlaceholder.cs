@@ -12,6 +12,7 @@ using UnityEngine.Events;
 using Reflectis.SDK.Core.Utilities;
 
 
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -188,82 +189,100 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 
         #region Quiz Text Size
 
-        [Header("Text size settings")]
+        //[Header("Text size settings")]
 
         //[SerializeField]
         //private bool showTextSizeSettings = false;
 
         //[DrawIf(nameof(showTextSizeSettings), true)]
+        [FoldableGroup("Text size settings")]
         [SerializeField, Tooltip("Overrides font size for Header field in the quiz panel")]
         private bool overrideHeaderTextSize = false;
 
+        [FoldableGroup("Text size settings")]
         [DrawIf(nameof(overrideHeaderTextSize), true)]
         [SerializeField, Tooltip("TEST")]
         private float headerSizeValue = 0.25f;
 
+        [FoldableGroup("Text size settings")]
         [DrawIf(nameof(overrideHeaderTextSize), true)]
         [SerializeField]
         private bool headerAutoSize = false;
 
 
         //[DrawIf(nameof(showTextSizeSettings), true)]
+        [FoldableGroup("Text size settings")]
         [SerializeField, Tooltip("Overrides font size for Title field in the quiz panel")]
         private bool overrideTitleTextSize = false;
 
+        [FoldableGroup("Text size settings")]
         [DrawIf(nameof(overrideTitleTextSize), true)]
         [SerializeField, Tooltip("TEST")]
         private float titleSizeValue = 0.35f;
 
+        [FoldableGroup("Text size settings")]
         [DrawIf(nameof(overrideTitleTextSize), true)]
         [SerializeField]
         private bool titleAutoSize = false;
 
 
         //[DrawIf(nameof(showTextSizeSettings), true)]
+        [FoldableGroup("Text size settings")]
         [SerializeField, Tooltip("Overrides font size for Description field in the quiz panel")]
         private bool overrideDescriptionTextSize = false;
 
+        [FoldableGroup("Text size settings")]
         [DrawIf(nameof(overrideDescriptionTextSize), true)]
         [SerializeField, Tooltip("TEST")]
         private float descriptionSizeValue = 0.25f;
 
+        [FoldableGroup("Text size settings")]
         [DrawIf(nameof(overrideDescriptionTextSize), true)]
         [SerializeField]
         private bool descriptionAutoSize = false;
 
 
         //[DrawIf(nameof(showTextSizeSettings), true)]
+        [FoldableGroup("Text size settings")]
         [SerializeField, Tooltip("Overrides font size for Question field in the quiz panel")]
         private bool overrideQuestionTextSize = false;
 
+        [FoldableGroup("Text size settings")]
         [DrawIf(nameof(overrideQuestionTextSize), true)]
         [SerializeField, Tooltip("TEST")]
         private float questionSizeValue = 0.25f;
 
+        [FoldableGroup("Text size settings")]
         [DrawIf(nameof(overrideQuestionTextSize), true)]
         [SerializeField]
         private bool questionAutoSize = false;
 
+        [FoldableGroup("Text size settings")]
         //[DrawIf(nameof(showTextSizeSettings), true)]
         [SerializeField, Tooltip("Overrides font size for results feedback field in the quiz panel")]
         private bool overrideFeedbacksTextSize = false;
 
+        [FoldableGroup("Text size settings")]
         [DrawIf(nameof(overrideFeedbacksTextSize), true)]
         [SerializeField, Tooltip("TEST")]
         private float feedbacksSizeValue = 0.25f;
 
+        [FoldableGroup("Text size settings")]
         [DrawIf(nameof(overrideFeedbacksTextSize), true)]
         [SerializeField]
         private bool feedbacksAutoSize = false;
 
+        [FoldableGroup("Text size settings")]
         //[DrawIf(nameof(showTextSizeSettings), true)]
         [SerializeField, Tooltip("Overrides font size for answers' title field")]
         private bool overrideAnswerTitleTextSize = false;
 
+        [FoldableGroup("Text size settings")]
         [DrawIf(nameof(overrideAnswerTitleTextSize), true)]
         [SerializeField, Tooltip("TEST")]
         private float answerTitleSizeValue = 0.25f;
 
+        [FoldableGroup("Text size settings")]
         [DrawIf(nameof(overrideAnswerTitleTextSize), true)]
         [SerializeField]
         private bool answerTitleAutoSize = false;
