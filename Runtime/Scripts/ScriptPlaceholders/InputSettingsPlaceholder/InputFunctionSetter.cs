@@ -9,7 +9,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
     {
         public void SetDefaultInputs()
         {
-            SM.GetSystem<ICharacterControllerSystem>().SetDeafultSettingsAsActive();
+            SM.GetSystem<ICharacterControllerSystem>().SetDefaultSettingsAsActive();
         }
 
         public void SetStaticCamera ()
