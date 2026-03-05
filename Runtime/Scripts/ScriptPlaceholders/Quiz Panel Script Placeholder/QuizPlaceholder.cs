@@ -12,6 +12,7 @@ using UnityEngine.Events;
 using Reflectis.SDK.Core.Utilities;
 
 
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -186,6 +187,105 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 
         #endregion
 
+        #region Quiz Text Size
+
+        [FoldableGroup("Text size settings")]
+        [SerializeField, Tooltip("Overrides font size for Header field in the quiz panel")]
+        private bool overrideHeaderTextSize = false;
+
+        [FoldableGroup("Text size settings")]
+        [DrawIf(nameof(overrideHeaderTextSize), true)]
+        [SerializeField, Indent, Tooltip("Target size for header field")]
+        private float headerSizeValue = 0.25f;
+
+        [FoldableGroup("Text size settings")]
+        [DrawIf(nameof(overrideHeaderTextSize), true)]
+        [SerializeField, Indent, Tooltip("Autosize setting for header field. If it's on, " +
+            "the value of Header Size Value will be used as max size")]
+        private bool headerAutoSize = false;
+
+
+        [FoldableGroup("Text size settings")]
+        [SerializeField, Tooltip("Overrides font size for Title field in the quiz panel")]
+        private bool overrideTitleTextSize = false;
+
+        [FoldableGroup("Text size settings")]
+        [DrawIf(nameof(overrideTitleTextSize), true)]
+        [SerializeField, Indent, Tooltip("Target size for title field")]
+        private float titleSizeValue = 0.35f;
+
+        [FoldableGroup("Text size settings")]
+        [DrawIf(nameof(overrideTitleTextSize), true)]
+        [SerializeField, Indent, Tooltip("Autosize setting for title field. If it's on, " +
+            "the value of Title Size Value will be used as max size")]
+        private bool titleAutoSize = false;
+
+
+        [FoldableGroup("Text size settings")]
+        [SerializeField, Tooltip("Overrides font size for Description field in the quiz panel")]
+        private bool overrideDescriptionTextSize = false;
+
+        [FoldableGroup("Text size settings")]
+        [DrawIf(nameof(overrideDescriptionTextSize), true)]
+        [SerializeField, Indent, Tooltip("Target size for description field")]
+        private float descriptionSizeValue = 0.25f;
+
+        [FoldableGroup("Text size settings")]
+        [DrawIf(nameof(overrideDescriptionTextSize), true)]
+        [SerializeField, Indent, Tooltip("Autosize setting for description field. If it's on, " +
+            "the value of Description Size Value will be used as max size")]
+        private bool descriptionAutoSize = false;
+
+
+        [FoldableGroup("Text size settings")]
+        [SerializeField, Tooltip("Overrides font size for Question field in the quiz panel")]
+        private bool overrideQuestionTextSize = false;
+
+        [FoldableGroup("Text size settings")]
+        [DrawIf(nameof(overrideQuestionTextSize), true)]
+        [SerializeField, Indent, Tooltip("Target size for question field")]
+        private float questionSizeValue = 0.25f;
+
+        [FoldableGroup("Text size settings")]
+        [DrawIf(nameof(overrideQuestionTextSize), true)]
+        [SerializeField, Indent, Tooltip("Autosize setting for question field. If it's on, " +
+            "the value of Question Size Value will be used as max size")]
+        private bool questionAutoSize = false;
+
+
+        [FoldableGroup("Text size settings")]
+        [SerializeField, Tooltip("Overrides font size for results feedback field in the quiz panel")]
+        private bool overrideFeedbacksTextSize = false;
+
+        [FoldableGroup("Text size settings")]
+        [DrawIf(nameof(overrideFeedbacksTextSize), true)]
+        [SerializeField, Indent, Tooltip("Target size for feedbacks field")]
+        private float feedbacksSizeValue = 0.25f;
+
+        [FoldableGroup("Text size settings")]
+        [DrawIf(nameof(overrideFeedbacksTextSize), true)]
+        [SerializeField, Indent, Tooltip("Autosize setting for feedbacks field. If it's on, " +
+            "the value of Feedbacks Size Value will be used as max size")]
+        private bool feedbacksAutoSize = false;
+
+
+        [FoldableGroup("Text size settings")]
+        [SerializeField, Tooltip("Overrides font size for answers' title field")]
+        private bool overrideAnswerTitleTextSize = false;
+
+        [FoldableGroup("Text size settings")]
+        [DrawIf(nameof(overrideAnswerTitleTextSize), true)]
+        [SerializeField, Indent, Tooltip("Target size for the title field of quiz answers")]
+        private float answerTitleSizeValue = 0.25f;
+
+        [FoldableGroup("Text size settings")]
+        [DrawIf(nameof(overrideAnswerTitleTextSize), true)]
+        [SerializeField, Indent, Tooltip("Autosize setting for answers' titles. If it's on, " +
+            "the value of Answer Title Size Value will be used as max size")]
+        private bool answerTitleAutoSize = false;
+
+        #endregion
+
         [Header("Quiz details")]
 
         [SerializeField, TextArea]
@@ -288,6 +388,27 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public Transform ContentTransform => contentTransform;
         public Transform PanelTransform => panelTransform;
         public Transform CameraPanTransform => cameraPanTransform;
+
+        // Text size override properties
+        public bool OverrideHeaderTextSize => overrideHeaderTextSize;
+        public float HeaderSizeValue => headerSizeValue;
+        public bool HeaderAutoSize => headerAutoSize;
+        public bool OverrideTitleTextSize => overrideTitleTextSize;
+        public float TitleSizeValue => titleSizeValue;
+        public bool TitleAutoSize => titleAutoSize;
+        public bool OverrideDescriptionTextSize => overrideDescriptionTextSize;
+        public float DescriptionSizeValue => descriptionSizeValue;
+        public bool DescriptionAutoSize => descriptionAutoSize;
+        public bool OverrideQuestionTextSize => overrideQuestionTextSize;
+        public float QuestionSizeValue => questionSizeValue;
+        public bool QuestionAutoSize => questionAutoSize;
+        public bool OverrideFeedbacksTextSize => overrideFeedbacksTextSize;
+        public float FeedbacksSizeValue => feedbacksSizeValue;
+        public bool FeedbacksAutoSize => feedbacksAutoSize;
+        public bool OverrideAnswerTitleTextSize => overrideAnswerTitleTextSize;
+        public float AnswerTitleSizeValue => answerTitleSizeValue;
+        public bool AnswerTitleAutoSize => answerTitleAutoSize;
+
         public string HeaderLabel => headerLabel.Trim(); // Removes white spaces at start and end of the string.
         public string TitleLabel => titleLabel.Trim(); // Removes white spaces at start and end of the string.
         public string DescriptionLabel => descriptionLabel.Trim(); // Removes white spaces at start and end of the string.
