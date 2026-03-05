@@ -14,13 +14,13 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 
         public void SetStaticCamera ()
         {
-            InputSettings newInput = new InputSettings(false, false, false, false, false, true, false, false, false);
+            InputSettings newInput = new InputSettings(false, false, false, false, false);
             SM.GetSystem<ICharacterControllerSystem>().DisableAllButCamera(newInput);
         }
 
         public void SetRotationCamera(bool constrainedRotation)
         {
-            InputSettings newInput = new InputSettings(true, false, false, false, false, true, false, false, constrainedRotation);
+            InputSettings newInput = new InputSettings(true, false, false, false, constrainedRotation);
             SM.GetSystem<ICharacterControllerSystem>().DisableAllButCamera(newInput);
         }
     }
