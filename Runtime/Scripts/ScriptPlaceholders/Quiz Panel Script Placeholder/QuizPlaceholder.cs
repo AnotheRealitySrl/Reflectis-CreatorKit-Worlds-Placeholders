@@ -301,6 +301,8 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         private string questionLabel = string.Empty;
 
         [Space]
+        [SerializeField]
+        public bool showFeedbackOnCorrectAnswer = false;
 
         [SerializeField]
         [OnChangedCall(nameof(OnSelectableAnswersChanged))]
