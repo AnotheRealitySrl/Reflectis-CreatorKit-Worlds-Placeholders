@@ -11,6 +11,6 @@ namespace Reflectis.CreatorKit.Worlds.Core.Placeholders
         private bool isTenantEnvironment = false;
 
         public string SceneAddressableName => sceneAddressableName;
-        public bool IsTenantEnvironment => isTenantEnvironment;
+        //public bool IsTenantEnvironment => isTenantEnvironment;
     }
 }
