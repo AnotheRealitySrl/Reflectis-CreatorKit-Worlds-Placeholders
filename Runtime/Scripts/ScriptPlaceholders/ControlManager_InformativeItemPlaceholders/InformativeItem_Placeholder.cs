@@ -10,7 +10,6 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         {
             base.StartTask();
 
-            Debug.LogError("Test");
         }
     }
 }

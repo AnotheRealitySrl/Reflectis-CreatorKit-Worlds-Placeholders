@@ -1,5 +1,11 @@
 # Release notes
 
+## v3.0.0
+
+### Added
+- Add various ready to use UI prefabs
+- Add control manager and informative item placeholders
+
 ## v2.2.0
 
 ### Added
