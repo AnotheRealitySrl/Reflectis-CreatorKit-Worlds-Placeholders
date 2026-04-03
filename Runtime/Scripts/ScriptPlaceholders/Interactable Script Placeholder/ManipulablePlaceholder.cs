@@ -55,6 +55,9 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [SerializeField]
         private bool lockYRotation;
 
+        [SerializeField]
+        private bool isFocusedInteractable;
+
         public EManipulationMode ManipulationMode { get => manipulationMode; set => manipulationMode = value; }
         public EVRInteraction VrInteraction { get => vrInteraction; set => vrInteraction = value; }
         public bool DynamicAttach { get => dynamicAttach; set => dynamicAttach = value; }
@@ -69,6 +72,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public bool FreeRotation { get => freeRotation; set => freeRotation = value; }
         public bool LockXRotation { get => lockXRotation; set => lockXRotation = value; }
         public bool LockYRotation { get => lockYRotation; set => lockYRotation = value; }
+        public bool IsFocusedInteractable { get => isFocusedInteractable; set => isFocusedInteractable = value; }
         public Transform AttachTransform { get => attachTransform; set => attachTransform = value; }
         public UnityEvent<EManipulableState> OnCurrentStateChange { get => onManipulationStateChange; }
     }

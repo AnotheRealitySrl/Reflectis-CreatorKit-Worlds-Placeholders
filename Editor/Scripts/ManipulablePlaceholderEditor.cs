@@ -32,6 +32,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("freeRotation"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("lockXRotation"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("lockYRotation"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("isFocusedInteractable"));
             }
             serializedObject.ApplyModifiedProperties();
         }
