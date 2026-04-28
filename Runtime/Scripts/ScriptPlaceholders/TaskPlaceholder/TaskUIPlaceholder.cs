@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
@@ -6,5 +7,12 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
     {
         [SerializeField] public GameObject taskSystem; //Reference to task system for callbacks (Forse non serve, ma ci collego gli eventi di callback)
         [SerializeField] public string descriptionKey;
+        [SerializeField] public bool showIntroductionAtAwake = false;
+
+        [HideInInspector] public UnityEvent<bool> onDisplayIntro;
+        public void DisplayIntroduction(bool value)
+        {
+            onDisplayIntro?.Invoke(value);
+        }
     }
 }
