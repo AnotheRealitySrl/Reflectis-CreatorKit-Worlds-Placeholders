@@ -2,7 +2,7 @@ using Reflectis.CreatorKit.Worlds.Placeholders;
 using Reflectis.SDK.Core.SystemFramework;
 using UnityEngine;
 
-namespace Reflectis.SDK.Inventory
+namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
     public interface IInventorySystem : ISystem
     {
