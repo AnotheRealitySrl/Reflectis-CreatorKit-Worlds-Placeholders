@@ -1,10 +1,10 @@
-using Reflectis.CreatorKit.Worlds.Core.Placeholders;
+﻿using Reflectis.CreatorKit.Worlds.Core.Placeholders;
 using UnityEditor;
 using UnityEngine;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
-    public class InventoryItemPlaceholder : SceneComponentPlaceholderNetwork, IAddressablePlaceholder
+    public class ToolItemPlaceholder : SceneComponentPlaceholderNetwork, IAddressablePlaceholder
     {
         [Tooltip("The name of the item")]
         public string itemName; //Name of the item
@@ -25,8 +25,8 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
     }
 
 #if UNITY_EDITOR
-    [CustomEditor(typeof(InventoryItemPlaceholder))]
-    public class InventoryItemPlaceholderEditor : Editor
+    [CustomEditor(typeof(ToolItemPlaceholder))]
+    public class ToolItemPlaceholderEditor : Editor
     {
         public override void OnInspectorGUI()
         {

@@ -1,25 +1,25 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static Reflectis.CreatorKit.Worlds.Placeholders.InventoryPlaceholder;
+using static Reflectis.CreatorKit.Worlds.Placeholders.ToolPlaceholder;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
-    public class InventoryPlaceholder : SpawnableHandlerPlaceholder
+    public class ToolPlaceholder : SpawnableHandlerPlaceholder
     {
-        public enum EInventoryLayout
+        public enum EToolLayout
         {
             Radial = 0,
             Grid = 1,   
         }
 
-        [HideInInspector] public EInventoryLayout inventoryLayout = EInventoryLayout.Radial; //Hide for now --> Display in the future
+        [HideInInspector] public EToolLayout inventoryLayout = EToolLayout.Radial; //Hide for now --> Display in the future
 
         [Tooltip("The list of the items that are already inside the menu")]
-        public List<InventoryItemPlaceholder> inventoryItems; //list of the scriptable objects describing the inventory items
+        public List<ToolItemPlaceholder> inventoryItems; //list of the scriptable objects describing the inventory items
 
         [Tooltip("The distance offset of the radialMenu from the camera")]
         public float zOffset = 0.8f;
@@ -44,15 +44,15 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 
 
 #if UNITY_EDITOR
-    [CustomEditor(typeof(InventoryPlaceholder))]
-    public class InventoryPlaceholderEditor : Editor
+    [CustomEditor(typeof(ToolPlaceholder))]
+    public class ToolPlaceholderEditor : Editor
     {
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
 
-            InventoryPlaceholder inventoryPlaceholder = (InventoryPlaceholder)target;
-            if(inventoryPlaceholder.inventoryLayout == EInventoryLayout.Radial)
+            ToolPlaceholder inventoryPlaceholder = (ToolPlaceholder)target;
+            if(inventoryPlaceholder.inventoryLayout == EToolLayout.Radial)
             {
                 SerializedProperty displayEmptyHand = serializedObject.FindProperty("displayEmptyHand");
                 EditorGUILayout.PropertyField(displayEmptyHand);
