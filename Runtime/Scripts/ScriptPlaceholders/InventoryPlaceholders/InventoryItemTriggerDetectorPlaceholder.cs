@@ -17,7 +17,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [Tooltip("The position in the list of interacting colliders of the item placeholder's collider")]
         [HideInInspector] public int colliderTriggerIndex = -1;
 
-        [Tooltip("The collider in the scene that is triggered when the inventory item enters its space")]
+        [Tooltip("The collider in the scene that is triggered when the inventory item enters its space. Need to have the interactable placeholder component")]
         public Collider[] detectorCollider;
 
         public UnityEvent OnItemTriggerEnter;
