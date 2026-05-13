@@ -6,13 +6,14 @@ using UnityEngine.Events;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
+    [RequireComponent(typeof(InteractablePlaceholder))]
     public class PickablePlaceholder : SceneComponentPlaceholderNetwork
     {
         [Tooltip("The name of the item")]
         public string itemName; //Name of the item
 
         [Tooltip("Number of times the item can be used before being lost, if -1 then it is infinite")]
-        [HideInInspector] public int numberOfUses = -1;
+        public int numberOfUses = -1;
 
         [Tooltip("The icon used to display the item in the menu")]
         public Sprite icon; //The icon to display in the inventory

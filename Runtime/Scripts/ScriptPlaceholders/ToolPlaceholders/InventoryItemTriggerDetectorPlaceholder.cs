@@ -10,7 +10,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
     public class InventoryItemTriggerDetectorPlaceholder : SceneComponentPlaceholderBase
     {
         [Tooltip("The reference to the item that triggers the action when entering the collider")]
-        public ToolItemPlaceholder inventoryItem;
+        public PickablePlaceholder inventoryItem;
 
         [Tooltip("Whether or not only a specific collider of the inventory item can trigger. Leave to false if all the colliders can trigger the detector")]
         public bool handleSpecificColliderPosition = false;
