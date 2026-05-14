@@ -3,9 +3,8 @@ using UnityEngine;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
-    public interface IInventorySystem : ISystem
+    public interface IGeneralInventorySystem : ISystem
     {
-        public void Spawn();
-        public void Spawn(Transform container);
+        public void SpawnInventories();
     }
 }
