@@ -3,8 +3,7 @@ using UnityEngine;
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
     [RequireComponent(typeof(PickablePlaceholder))]
-    public class ConsumablePlaceholder : SceneComponentPlaceholderNetwork
+    public class WearablePlaceholder : SceneComponentPlaceholderNetwork
     {
-
     }
 }

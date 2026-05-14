@@ -26,6 +26,8 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 
         public UnityEvent onItemUsed;
         public UnityEvent onItemExpired;
+        [HideInInspector] public UnityEvent onItemAddedToInventory;
+
 
         public virtual string AddressableKey => itemName;
     }
