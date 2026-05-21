@@ -11,8 +11,11 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         private InputActionReference vrInput;
         [SerializeField]
         private InputActionReference desktopInput;
+        [SerializeField]
+        private InputActionReference mobileInput;
 
         public InputActionReference VrInput { get => vrInput; set => vrInput = value; }
         public InputActionReference DesktopInput { get => desktopInput; set => desktopInput = value; }
+        public InputActionReference MobileInput { get => mobileInput; set => mobileInput = value; }
     }
 }
