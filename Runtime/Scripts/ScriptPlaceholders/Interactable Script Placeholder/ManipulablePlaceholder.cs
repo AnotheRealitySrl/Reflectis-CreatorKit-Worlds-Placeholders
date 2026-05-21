@@ -58,6 +58,9 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [SerializeField]
         private bool isFocusedInteractable;
 
+        [HideInInspector] public bool spriteDragMode = false;
+        [HideInInspector] public Sprite spriteToDrag;
+
         public EManipulationMode ManipulationMode { get => manipulationMode; set => manipulationMode = value; }
         public EVRInteraction VrInteraction { get => vrInteraction; set => vrInteraction = value; }
         public bool DynamicAttach { get => dynamicAttach; set => dynamicAttach = value; }

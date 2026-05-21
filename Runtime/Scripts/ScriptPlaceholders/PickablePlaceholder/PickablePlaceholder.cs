@@ -3,6 +3,7 @@ using UnityEditor;
 #endif
 using UnityEngine;
 using UnityEngine.Events;
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IManipulable;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
@@ -30,6 +31,27 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 
 
         public virtual string AddressableKey => itemName;
+
+        private void Awake()
+        {
+            ManipulablePlaceholder manipulablePlaceholder = GetComponent<ManipulablePlaceholder>();
+            if(manipulablePlaceholder == null)
+            {
+                manipulablePlaceholder = gameObject.AddComponent<ManipulablePlaceholder>();
+            }
+
+            manipulablePlaceholder.VrInteraction = EVRInteraction.Hands;
+            manipulablePlaceholder.ManipulationMode = EManipulationMode.Translate | EManipulationMode.Rotate;
+            manipulablePlaceholder.ManipulationMode &= ~EManipulationMode.Scale;
+            manipulablePlaceholder.DynamicAttach = false;
+            manipulablePlaceholder.AdjustRotationOnRelease = false;
+            manipulablePlaceholder.MouseLookAtCamera = false;
+            manipulablePlaceholder.GizmosEnabled = false;
+            manipulablePlaceholder.IsFocusedInteractable = false;
+            manipulablePlaceholder.AttachTransform = null;
+            manipulablePlaceholder.spriteDragMode = true;
+            manipulablePlaceholder.spriteToDrag = icon;
+        }
     }
 
 #if UNITY_EDITOR
