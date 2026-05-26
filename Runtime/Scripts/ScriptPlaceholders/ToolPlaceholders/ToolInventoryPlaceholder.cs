@@ -1,19 +1,19 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static Reflectis.CreatorKit.Worlds.Placeholders.ToolPlaceholder;
+using static Reflectis.CreatorKit.Worlds.Placeholders.ToolInventoryPlaceholder;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
-    public class ToolPlaceholder : SpawnableHandlerPlaceholder
+    public class ToolInventoryPlaceholder : SpawnableHandlerPlaceholder
     {
         public enum EToolLayout
         {
             Radial = 0,
-            Grid = 1,   
+            Grid = 1,
         }
 
         [HideInInspector] public EToolLayout inventoryLayout = EToolLayout.Radial; //Hide for now --> Display in the future
@@ -42,22 +42,21 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [HideInInspector] public string emptyHandName;
     }
 
-
 #if UNITY_EDITOR
-    [CustomEditor(typeof(ToolPlaceholder))]
+    [CustomEditor(typeof(ToolPlaceholderObsolete))]
     public class ToolPlaceholderEditor : Editor
     {
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
 
-            ToolPlaceholder inventoryPlaceholder = (ToolPlaceholder)target;
-            if(inventoryPlaceholder.inventoryLayout == EToolLayout.Radial)
+            ToolInventoryPlaceholder inventoryPlaceholder = (ToolInventoryPlaceholder)target;
+            if (inventoryPlaceholder.inventoryLayout == EToolLayout.Radial)
             {
                 SerializedProperty displayEmptyHand = serializedObject.FindProperty("displayEmptyHand");
                 EditorGUILayout.PropertyField(displayEmptyHand);
 
-                if(inventoryPlaceholder.displayEmptyHand == true)
+                if (inventoryPlaceholder.displayEmptyHand == true)
                 {
                     SerializedProperty emptyHandSprite = serializedObject.FindProperty("emptyHandSprite");
                     EditorGUILayout.PropertyField(emptyHandSprite);
@@ -70,4 +69,3 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
     }
 #endif
 }
-

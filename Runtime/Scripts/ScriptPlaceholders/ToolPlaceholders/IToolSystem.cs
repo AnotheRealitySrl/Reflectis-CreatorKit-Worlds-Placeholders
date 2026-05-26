@@ -6,7 +6,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
     public interface IToolSystem : ISystem
     {
-        public void InstantiateInventory(ToolPlaceholder inventoryPlaceholder);
+        public void InstantiateInventory(ToolInventoryPlaceholder inventoryPlaceholder);
 
         public void SetInventoryAlpha(float value);
 
