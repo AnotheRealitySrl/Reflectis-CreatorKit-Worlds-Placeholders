@@ -43,7 +43,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
     }
 
 #if UNITY_EDITOR
-    [CustomEditor(typeof(ToolPlaceholderObsolete))]
+    [CustomEditor(typeof(ToolInventoryPlaceholder))]
     public class ToolPlaceholderEditor : Editor
     {
         public override void OnInspectorGUI()
