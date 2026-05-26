@@ -1,22 +1,21 @@
-using UnityEngine;
-#if UNITY_EDITOR
+﻿using Reflectis.CreatorKit.Worlds.Core.Placeholders;
 using UnityEditor;
-#endif
+using UnityEngine;
+
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
     [RequireComponent(typeof(PickablePlaceholder))]
-    public class ToolItemPlaceholder : SceneComponentPlaceholderNetwork
+    public class ToolItemPlaceholderObsolete : PickablePlaceholder, IAddressablePlaceholder
     {
-        public PickablePlaceholder PickablePlaceholder
-        {
-            get => GetComponent<PickablePlaceholder>();
-        }
+
+        //[Tooltip("Whether or not the item is a consumable or an infinite item")]
+        //public bool consumable; //Whether or not the item is a consumable or an infinite item
     }
 
 #if UNITY_EDITOR
-    [CustomEditor(typeof(ToolItemPlaceholder))]
-    public class ToolItemPlaceholderEditor : Editor
+    [CustomEditor(typeof(ToolItemPlaceholderObsolete))]
+    public class ToolItemPlaceholderObsoleteEditor : Editor
     {
         public override void OnInspectorGUI()
         {
@@ -32,5 +31,3 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
     }
 #endif
 }
-
-
