@@ -25,13 +25,13 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public float zOffset = 0.8f;
 
         [Tooltip("The distance offset of the radialMenu on the y axis")]
-        public float yOffset = 1.15f;
+        public float yOffset = 0.15f;
 
         [Tooltip("The radius that the items are going to use when opening the radialMenu")]
         public float radius = 0.3f;
 
         [Tooltip("The speed with which the radialMenu will be opened")]
-        public float openSpeed = 1f;
+        public float openSpeed = 0.25f;
 
         [Tooltip("the input pressed in order to open and close the radialMenu")]
         public InputAction action;
