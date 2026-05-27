@@ -8,9 +8,15 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
     [RequireComponent(typeof(PickablePlaceholder))]
     public class ToolItemPlaceholder : SceneComponentPlaceholderNetwork
     {
+        private PickablePlaceholder _pickablePlaceholder;
         public PickablePlaceholder PickablePlaceholder
         {
-            get => GetComponent<PickablePlaceholder>();
+            get
+            {
+                if (_pickablePlaceholder == null)
+                    _pickablePlaceholder = GetComponent<PickablePlaceholder>();
+                return _pickablePlaceholder;
+            }
         }
     }
 
