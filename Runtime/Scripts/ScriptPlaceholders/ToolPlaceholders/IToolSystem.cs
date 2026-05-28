@@ -10,6 +10,6 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
 
         public void SetInventoryAlpha(float value);
 
-        public void AddItemToInventory(ToolItemPlaceholder _placeholder);
+        public bool AddItemToInventory(ToolItemPlaceholder _placeholder);
     }
 }
