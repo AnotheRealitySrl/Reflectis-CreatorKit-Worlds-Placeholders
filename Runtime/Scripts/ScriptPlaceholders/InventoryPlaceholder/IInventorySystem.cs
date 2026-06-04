@@ -9,5 +9,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public void Spawn(Transform container);
 
         public void CreateItemSlots(int value);
+
+        public void DisplayItemCount(bool value);
     }
 }
