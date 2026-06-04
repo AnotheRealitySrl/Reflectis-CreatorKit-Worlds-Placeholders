@@ -35,7 +35,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         private void Awake()
         {
             ManipulablePlaceholder manipulablePlaceholder = GetComponent<ManipulablePlaceholder>();
-            if(manipulablePlaceholder == null)
+            if (manipulablePlaceholder == null)
             {
                 manipulablePlaceholder = gameObject.AddComponent<ManipulablePlaceholder>();
             }
@@ -75,47 +75,47 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
             manipulablePlaceholder.spriteDragMode = true;
             manipulablePlaceholder.spriteToDrag = icon;
         }
-    }
 
 
-    [CustomEditor(typeof(PickablePlaceholder), true)]
-    public class PickablePlaceholderEditor : Editor
-    {
-        SerializedProperty transformableProp;
-        SerializedProperty transformIntoProp;
-
-        void OnEnable()
+        [CustomEditor(typeof(PickablePlaceholder), true)]
+        public class PickablePlaceholderEditor : Editor
         {
-            // You must link the properties here first
-            transformableProp = serializedObject.FindProperty("transformable");
-            transformIntoProp = serializedObject.FindProperty("transformIntoPickable");
-        }
+            SerializedProperty transformableProp;
+            SerializedProperty transformIntoProp;
 
-        public override void OnInspectorGUI()
-        {
-            serializedObject.Update();
-            //DrawDefaultInspector();
-            DrawPropertiesExcluding(serializedObject, "m_Script", "transformable", "transformIntoPickable", "IsNetworked", "<IsNetworked>k__BackingField");
-
-            EditorGUILayout.Space();
-            EditorGUILayout.LabelField("Transformation Settings", EditorStyles.boldLabel);
-
-            // 2. Draw your custom conditional logic
-            EditorGUILayout.PropertyField(transformableProp);
-
-            if (transformableProp.boolValue)
+            void OnEnable()
             {
-                EditorGUI.indentLevel++;
-                EditorGUILayout.PropertyField(transformIntoProp);
-                EditorGUI.indentLevel--;
+                // You must link the properties here first
+                transformableProp = serializedObject.FindProperty("transformable");
+                transformIntoProp = serializedObject.FindProperty("transformIntoPickable");
             }
 
+            public override void OnInspectorGUI()
+            {
+                serializedObject.Update();
+                //DrawDefaultInspector();
+                DrawPropertiesExcluding(serializedObject, "m_Script", "transformable", "transformIntoPickable", "IsNetworked", "<IsNetworked>k__BackingField");
 
-            SerializedProperty networked = serializedObject.FindProperty("<IsNetworked>k__BackingField");
-            networked.boolValue = true;
+                EditorGUILayout.Space();
+                EditorGUILayout.LabelField("Transformation Settings", EditorStyles.boldLabel);
 
-            serializedObject.ApplyModifiedProperties();
+                // 2. Draw your custom conditional logic
+                EditorGUILayout.PropertyField(transformableProp);
+
+                if (transformableProp.boolValue)
+                {
+                    EditorGUI.indentLevel++;
+                    EditorGUILayout.PropertyField(transformIntoProp);
+                    EditorGUI.indentLevel--;
+                }
+
+
+                SerializedProperty networked = serializedObject.FindProperty("<IsNetworked>k__BackingField");
+                networked.boolValue = true;
+
+                serializedObject.ApplyModifiedProperties();
+            }
         }
-    }
 #endif
+    }
 }
