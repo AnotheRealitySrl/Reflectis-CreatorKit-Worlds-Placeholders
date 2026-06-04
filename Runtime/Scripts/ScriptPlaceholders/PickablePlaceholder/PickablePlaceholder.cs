@@ -7,7 +7,7 @@ using static Reflectis.CreatorKit.Worlds.Core.Interaction.IManipulable;
 
 namespace Reflectis.CreatorKit.Worlds.Placeholders
 {
-    [RequireComponent(typeof(InteractablePlaceholder))]
+    [RequireComponent(typeof(InteractablePlaceholder), typeof(ManipulablePlaceholder))]
     public class PickablePlaceholder : SceneComponentPlaceholderNetwork
     {
         [Tooltip("The name of the item")]
@@ -52,9 +52,32 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
             manipulablePlaceholder.spriteDragMode = true;
             manipulablePlaceholder.spriteToDrag = icon;
         }
-    }
 
 #if UNITY_EDITOR
+
+        private void OnValidate()
+        {
+            ManipulablePlaceholder manipulablePlaceholder = GetComponent<ManipulablePlaceholder>();
+            if (manipulablePlaceholder == null)
+            {
+                manipulablePlaceholder = gameObject.AddComponent<ManipulablePlaceholder>();
+            }
+
+            manipulablePlaceholder.VrInteraction = EVRInteraction.Hands;
+            manipulablePlaceholder.ManipulationMode = EManipulationMode.Translate | EManipulationMode.Rotate;
+            manipulablePlaceholder.ManipulationMode &= ~EManipulationMode.Scale;
+            manipulablePlaceholder.DynamicAttach = false;
+            manipulablePlaceholder.AdjustRotationOnRelease = false;
+            manipulablePlaceholder.MouseLookAtCamera = false;
+            manipulablePlaceholder.GizmosEnabled = false;
+            manipulablePlaceholder.IsFocusedInteractable = false;
+            manipulablePlaceholder.AttachTransform = null;
+            manipulablePlaceholder.spriteDragMode = true;
+            manipulablePlaceholder.spriteToDrag = icon;
+        }
+    }
+
+
     [CustomEditor(typeof(PickablePlaceholder), true)]
     public class PickablePlaceholderEditor : Editor
     {
