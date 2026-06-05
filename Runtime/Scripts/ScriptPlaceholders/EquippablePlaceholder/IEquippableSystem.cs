@@ -8,5 +8,13 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public bool AddItemToContainerInventory(PickablePlaceholder _pickable);
 
         public void DisplayFeedback(Transform spawnTransform, bool value);
+
+        public void HoveredDetector();
+
+        public void UnHoveredDetector();
+
+        public void EquipItem(IPickable equippingPickable);
+
+        public void RemoveItem(IPickable unequipPickable);
     }
 }
