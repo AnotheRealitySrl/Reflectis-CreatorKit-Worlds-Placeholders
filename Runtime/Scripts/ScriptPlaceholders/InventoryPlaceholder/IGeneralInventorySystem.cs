@@ -6,5 +6,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
     public interface IGeneralInventorySystem : ISystem
     {
         public void SpawnInventories();
+
+        public void DisplayAddedItem(Sprite sprite, string text);
     }
 }
