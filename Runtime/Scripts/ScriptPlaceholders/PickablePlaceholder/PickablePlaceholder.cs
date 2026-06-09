@@ -25,6 +25,8 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         [SerializeField] public bool transformable;
         [SerializeField] public PickablePlaceholder transformIntoPickable;
 
+        public bool destroyOnUse = false;
+
         public UnityEvent onItemUsed;
         public UnityEvent onItemExpired;
         public UnityEvent onItemAddedToInventory;
