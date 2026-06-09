@@ -7,6 +7,6 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
     public interface IPickable
     {
         Task Init(SceneComponentPlaceholderBase placeholder);
-
+        public string GetPickableName();
     }
 }
