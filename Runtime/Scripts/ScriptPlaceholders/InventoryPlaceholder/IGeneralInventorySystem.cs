@@ -7,6 +7,6 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
     {
         public void SpawnInventories();
 
-        public void DisplayAddedItem(Sprite sprite, string text);
+        public void DisplayAddedItem(Sprite sprite, string text, bool wearable);
     }
 }
