@@ -1,5 +1,8 @@
 # Release notes
 
+## v3.1.0
+- Add placeholders for tasks and inventory system
+
 ## v3.0.0
 
 ### Added
