@@ -1,7 +1,21 @@
 # Release notes
 
-## v3.1.0
-- Add placeholders for tasks and inventory system
+## v4.0.0
+
+### Changed
+- Renamed the inventory system to the tool system across placeholders (breaking).
+
+### Added
+- New tool/inventory placeholders (consumable, draggable, wearable, slot count, general inventory system).
+- Task UI placeholders (introduction callback, description key).
+- `IEquippableSystem` and item-count display logic.
+- Mobile platform options.
+
+### Deprecated
+- Old inventory placeholders marked obsolete in favour of the new tool placeholders.
+
+### Fixed
+- Various fixes on pickable and manipulable placeholders.
 
 ## v3.0.0
 
