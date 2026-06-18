@@ -23,6 +23,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
         public Transform feedbackCheckPosition;
 
         public UnityEvent OnItemTriggerEnter;
+        public UnityEvent OnWrongItemTriggerEnter;
         public UnityEvent OnItemTriggerExit;
     }
 
