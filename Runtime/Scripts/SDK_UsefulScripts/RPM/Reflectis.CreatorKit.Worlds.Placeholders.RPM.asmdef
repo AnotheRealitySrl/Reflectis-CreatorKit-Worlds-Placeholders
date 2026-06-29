@@ -1,0 +1,24 @@
+{
+    "name": "Reflectis.CreatorKit.Worlds.Placeholders.RPM",
+    "rootNamespace": "Reflectis.CreatorKit.Worlds.Placeholders",
+    "references": [
+        "GUID:96af4ea235d92d245a095007c6ca3701"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "REFLECTIS_HAS_RPM"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.readyplayerme.core",
+            "expression": "",
+            "define": "REFLECTIS_HAS_RPM"
+        }
+    ],
+    "noEngineReferences": false
+}
