@@ -1,5 +1,10 @@
 # Release notes
 
+## v4.1.0
+
+### Added
+- Added the `OnWrongItemTriggerEnter` UnityEvent to `InventoryItemTriggerDetectorPlaceholder`, so authored worlds can react to the wrong inventory item entering the trigger.
+
 ## v4.0.0
 
 ### Changed
