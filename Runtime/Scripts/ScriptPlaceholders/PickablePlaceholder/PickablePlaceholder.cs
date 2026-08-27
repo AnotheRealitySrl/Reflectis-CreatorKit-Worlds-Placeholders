@@ -48,7 +48,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
             manipulablePlaceholder.DynamicAttach = false;
             manipulablePlaceholder.AdjustRotationOnRelease = false;
             manipulablePlaceholder.MouseLookAtCamera = false;
-            manipulablePlaceholder.GizmosEnabled = false;
+            manipulablePlaceholder.GizmosDisabled = true;
             manipulablePlaceholder.IsFocusedInteractable = false;
             manipulablePlaceholder.AttachTransform = null;
             manipulablePlaceholder.spriteDragMode = true;
@@ -71,7 +71,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders
             manipulablePlaceholder.DynamicAttach = false;
             manipulablePlaceholder.AdjustRotationOnRelease = false;
             manipulablePlaceholder.MouseLookAtCamera = false;
-            manipulablePlaceholder.GizmosEnabled = false;
+            manipulablePlaceholder.GizmosDisabled = true;
             manipulablePlaceholder.IsFocusedInteractable = false;
             manipulablePlaceholder.AttachTransform = null;
             manipulablePlaceholder.spriteDragMode = true;
