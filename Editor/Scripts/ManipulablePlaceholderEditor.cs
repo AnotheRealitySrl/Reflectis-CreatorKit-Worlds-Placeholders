@@ -27,7 +27,7 @@ namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
 
             if (interactablePlaceholder.ManipulationMode.HasFlag(Core.Interaction.IManipulable.EManipulationMode.Rotate))
             {
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("gizmosEnabled"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("gizmosDisabled"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("threshold"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("freeRotation"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("lockXRotation"));
