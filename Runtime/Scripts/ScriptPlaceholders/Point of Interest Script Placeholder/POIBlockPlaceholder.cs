@@ -1,10 +1,10 @@
-using Reflectis.SDK.Core.Utilities;
+using Virtuademy.SDK.Core.Utilities;
 
 using System.Collections.Generic;
 
 using UnityEngine;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public abstract class POIBlockPlaceholder : MonoBehaviour
     {

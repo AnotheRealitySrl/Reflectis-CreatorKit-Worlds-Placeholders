@@ -1,6 +1,6 @@
 using UnityEditor;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
+namespace Virtuademy.CreatorKit.Worlds.Placeholders.Editor
 {
     [CustomEditor(typeof(ManipulablePlaceholder))]
     public class ManipulablePlaceholderEditor : UnityEditor.Editor

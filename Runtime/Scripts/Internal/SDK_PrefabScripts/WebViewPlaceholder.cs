@@ -1,9 +1,9 @@
-using Reflectis.CreatorKit.Worlds.Core.Placeholders;
+using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
 
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public enum QuerystringParameter
     {

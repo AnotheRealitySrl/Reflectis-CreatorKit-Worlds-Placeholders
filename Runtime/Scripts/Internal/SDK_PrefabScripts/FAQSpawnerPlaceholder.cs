@@ -4,7 +4,7 @@ using System.Drawing;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public class FAQSpawnerPlaceholder : MonoBehaviour
     {

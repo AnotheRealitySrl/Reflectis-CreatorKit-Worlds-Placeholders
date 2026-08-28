@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public class InventorySlotPlaceholder : SceneComponentPlaceholderNetwork
     {

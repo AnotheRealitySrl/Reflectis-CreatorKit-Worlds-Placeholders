@@ -4,9 +4,9 @@ using UnityEditor;
 #endif
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static Reflectis.CreatorKit.Worlds.Placeholders.ToolPlaceholderObsolete;
+using static Virtuademy.CreatorKit.Worlds.Placeholders.ToolPlaceholderObsolete;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public class ToolPlaceholderObsolete : SpawnableHandlerPlaceholder
     {

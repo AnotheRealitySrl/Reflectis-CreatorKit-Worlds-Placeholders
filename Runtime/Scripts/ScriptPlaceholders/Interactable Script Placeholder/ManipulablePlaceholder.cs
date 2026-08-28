@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
-using static Reflectis.CreatorKit.Worlds.Core.Interaction.IManipulable;
+using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IManipulable;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public class ManipulablePlaceholder : InteractionBehaviourPlaceholder
     {

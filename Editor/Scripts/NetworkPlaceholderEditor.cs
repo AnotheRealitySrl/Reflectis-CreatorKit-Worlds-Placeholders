@@ -1,10 +1,10 @@
-using Reflectis.CreatorKit.Worlds.Core.Placeholders;
+using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
 
 using UnityEditor;
 
 using UnityEngine;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
+namespace Virtuademy.CreatorKit.Worlds.Placeholders.Editor
 {
     [CustomEditor(typeof(SceneComponentPlaceholderBase), true)]
     public class NetworkPlaceholderEditor : UnityEditor.Editor

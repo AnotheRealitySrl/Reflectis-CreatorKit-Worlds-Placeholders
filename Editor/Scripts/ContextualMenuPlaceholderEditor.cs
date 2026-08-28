@@ -2,9 +2,9 @@ using UnityEditor;
 
 using UnityEngine;
 
-using static Reflectis.CreatorKit.Worlds.Core.Interaction.IContextualMenuManageable;
+using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IContextualMenuManageable;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
+namespace Virtuademy.CreatorKit.Worlds.Placeholders.Editor
 {
     [CustomEditor(typeof(ContextualMenuPlaceholder))]
     public class ContextualMenuPlaceholderEditor : UnityEditor.Editor

@@ -2,10 +2,10 @@ using UnityEditor;
 
 using UnityEngine;
 
-using static Reflectis.CreatorKit.Worlds.Core.Interaction.IContextualMenuManageable;
-using static Reflectis.CreatorKit.Worlds.Core.Interaction.IInteractable;
+using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IContextualMenuManageable;
+using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IInteractable;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
+namespace Virtuademy.CreatorKit.Worlds.Placeholders.Editor
 {
     [CustomEditor(typeof(InteractablePlaceholderObsolete))]
     public class InteractablePlaceholderEditor : UnityEditor.Editor

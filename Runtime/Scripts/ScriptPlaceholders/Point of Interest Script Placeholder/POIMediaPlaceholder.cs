@@ -1,11 +1,11 @@
-using Reflectis.SDK.Core.Utilities;
+using Virtuademy.SDK.Core.Utilities;
 
 using UnityEditor;
 
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public class POIMediaPlaceholder : POIBlockPlaceholder
     {

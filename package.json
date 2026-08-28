@@ -1,6 +1,6 @@
 {
-  "name": "com.anotherealitysrl.reflectis-creatorkit-worlds-placeholders",
-  "displayName": "Reflectis-CreatorKit-Worlds-Placeholders",
+  "name": "com.anotherealitysrl.virtuademy-creatorkit-worlds-placeholders",
+  "displayName": "Virtuademy-CreatorKit-Worlds-Placeholders",
   "version": "4.1.0",
   "unity": "2020.1",
   "description": "Reflectis CreatorKit Worlds Placeholders module",
@@ -10,6 +10,6 @@
   "category": "Unity",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AnotheRealitySrl/Reflectis-CreatorKit-Worlds-Placeholders"
+    "url": "https://github.com/AnotheRealitySrl/Virtuademy-CreatorKit-Worlds-Placeholders"
   }
 }

@@ -1,8 +1,8 @@
-using Reflectis.CreatorKit.Worlds.Core.ObjectSpawner;
+using Virtuademy.CreatorKit.Worlds.Core.ObjectSpawner;
 
 using UnityEngine;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public class SpawnObjectData : MonoBehaviour
     {

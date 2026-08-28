@@ -1,5 +1,5 @@
-using Reflectis.CreatorKit.Worlds.Core;
-using Reflectis.CreatorKit.Worlds.Core.Placeholders;
+using Virtuademy.CreatorKit.Worlds.Core;
+using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
 using System.IO;
 
 
@@ -9,7 +9,7 @@ using UnityEngine;
 #endif
 
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public class SpawnableHandlerPlaceholder : SceneComponentPlaceholderBase
     {

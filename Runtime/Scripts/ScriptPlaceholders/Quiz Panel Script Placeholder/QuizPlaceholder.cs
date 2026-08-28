@@ -9,7 +9,7 @@ using System.Linq;
 
 using UnityEngine.Events;
 
-using Reflectis.SDK.Core.Utilities;
+using Virtuademy.SDK.Core.Utilities;
 
 
 
@@ -17,7 +17,7 @@ using Reflectis.SDK.Core.Utilities;
 using UnityEditor;
 #endif
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public enum EQuizLayout
     {

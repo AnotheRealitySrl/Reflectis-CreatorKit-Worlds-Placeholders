@@ -1,4 +1,4 @@
-using Reflectis.CreatorKit.Worlds.Core.Placeholders;
+using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
 
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
+namespace Virtuademy.CreatorKit.Worlds.Placeholders.Editor
 {
     public class SceneObjectsManagementWindow : EditorWindow
     {

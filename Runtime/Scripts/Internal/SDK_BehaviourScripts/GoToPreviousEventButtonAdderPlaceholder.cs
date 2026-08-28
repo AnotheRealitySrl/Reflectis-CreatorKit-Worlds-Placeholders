@@ -1,6 +1,6 @@
-using Reflectis.CreatorKit.Worlds.Core.Placeholders;
+using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public class GoToPreviousEventButtonAdderPlaceholder : SceneComponentPlaceholderBase
     {

@@ -1,10 +1,10 @@
-using Reflectis.SDK.Core.Utilities;
+using Virtuademy.SDK.Core.Utilities;
 
 using UnityEngine;
 
-using static Reflectis.CreatorKit.Worlds.Core.Interaction.IContextualMenuManageable;
+using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IContextualMenuManageable;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public class ContextualMenuPlaceholder : InteractionBehaviourPlaceholder
     {

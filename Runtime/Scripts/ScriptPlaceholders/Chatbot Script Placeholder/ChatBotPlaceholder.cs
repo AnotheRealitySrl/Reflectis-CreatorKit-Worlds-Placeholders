@@ -1,9 +1,9 @@
-using Reflectis.SDK.Core.ChatBot;
-using Reflectis.SDK.Core.Utilities;
+using Virtuademy.SDK.Core.ChatBot;
+using Virtuademy.SDK.Core.Utilities;
 
 using UnityEngine;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public class ChatBotPlaceholder : ChatbotPlaceholderBase
     {

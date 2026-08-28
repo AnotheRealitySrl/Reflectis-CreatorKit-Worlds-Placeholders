@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     [RequireComponent(typeof(MascottePlaceholder))]
     public class MascottePanelPlaceholder : PanelPlaceholder

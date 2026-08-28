@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     [RequireComponent(typeof(PickablePlaceholder))]
     public class ToolItemPlaceholder : SceneComponentPlaceholderNetwork

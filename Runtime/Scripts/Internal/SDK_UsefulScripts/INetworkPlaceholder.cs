@@ -1,4 +1,4 @@
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public interface INetworkPlaceholder
     {

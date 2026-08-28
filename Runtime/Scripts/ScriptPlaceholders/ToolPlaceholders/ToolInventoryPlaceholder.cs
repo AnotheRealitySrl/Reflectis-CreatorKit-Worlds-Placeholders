@@ -4,9 +4,9 @@ using UnityEditor;
 #endif
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static Reflectis.CreatorKit.Worlds.Placeholders.ToolInventoryPlaceholder;
+using static Virtuademy.CreatorKit.Worlds.Placeholders.ToolInventoryPlaceholder;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public class ToolInventoryPlaceholder : SpawnableHandlerPlaceholder
     {

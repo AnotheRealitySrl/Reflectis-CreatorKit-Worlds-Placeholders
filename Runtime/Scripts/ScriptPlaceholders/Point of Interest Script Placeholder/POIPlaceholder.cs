@@ -1,5 +1,5 @@
-using Reflectis.CreatorKit.Worlds.Core.Placeholders;
-using Reflectis.SDK.Core.Utilities;
+using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
+using Virtuademy.SDK.Core.Utilities;
 
 using TMPro;
 
@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public class POIPlaceholder : SceneComponentPlaceholderBase, IAddressablePlaceholder
     {

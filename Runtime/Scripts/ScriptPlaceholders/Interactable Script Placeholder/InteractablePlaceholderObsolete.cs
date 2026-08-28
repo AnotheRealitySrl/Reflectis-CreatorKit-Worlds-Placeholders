@@ -1,4 +1,4 @@
-using Reflectis.SDK.Core.Utilities;
+using Virtuademy.SDK.Core.Utilities;
 
 using System;
 using System.Collections.Generic;
@@ -8,12 +8,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-using static Reflectis.CreatorKit.Worlds.Core.Interaction.IContextualMenuManageable;
-using static Reflectis.CreatorKit.Worlds.Core.Interaction.IInteractable;
-using static Reflectis.CreatorKit.Worlds.Core.Interaction.IManipulable;
-using static Reflectis.CreatorKit.Worlds.Core.Interaction.IVisualScriptingInteractable;
+using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IContextualMenuManageable;
+using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IInteractable;
+using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IManipulable;
+using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IVisualScriptingInteractable;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders
+namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     public class InteractablePlaceholderObsolete : SceneComponentPlaceholderNetwork
     {
