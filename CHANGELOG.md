@@ -1,6 +1,8 @@
 # Release notes
 
-## v5.0.0
+## Unreleased
+
+Warrants a **major** bump at the next platform release: the removed public property and the flipped serialized default are both breaking for authored worlds.
 
 ### Changed
 - `ManipulablePlaceholder.GizmosEnabled` is replaced by `GizmosDisabled`, with inverted meaning (breaking). Rotation and scale gizmos are now **enabled by default** and the flag turns them off. `PickablePlaceholder` sets `GizmosDisabled = true`, so pickables keep behaving as before.
