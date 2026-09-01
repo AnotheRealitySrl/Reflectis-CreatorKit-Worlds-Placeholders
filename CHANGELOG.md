@@ -1,5 +1,17 @@
 # Release notes
 
+## Unreleased
+
+Warrants a **major** bump at the next platform release: the removed public property and the flipped serialized default are both breaking for authored worlds.
+
+### Changed
+- `ManipulablePlaceholder.GizmosEnabled` is replaced by `GizmosDisabled`, with inverted meaning (breaking). Rotation and scale gizmos are now **enabled by default** and the flag turns them off. `PickablePlaceholder` sets `GizmosDisabled = true`, so pickables keep behaving as before.
+- POI placeholders read their TMP text at runtime (`TitleText`, `HeaderText`, `BodyText`, `Text`), making the TMP the source of truth; the serialized field is kept as a fallback when the TMP is missing.
+
+### Migration
+- The serialized field was renamed **and** its meaning inverted, so the stored value cannot be carried over automatically. Every `ManipulablePlaceholder` already saved in a prefab, scene, or authored world reloads with `GizmosDisabled = false`, i.e. **gizmos on** — where the old default (`GizmosEnabled = false`) kept them off. Worlds that relied on the old default must tick the new flag to restore gizmo-free manipulation.
+- Consumers assigning the old property (`placeholder.GizmosEnabled`) must switch to `!placeholder.GizmosDisabled`.
+
 ## v4.1.0
 
 ### Added
