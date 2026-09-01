@@ -1,11 +1,13 @@
-using Virtuademy.SDK.Core.Utilities;
+﻿using Virtuademy.SDK.Core.Utilities;
 
 using UnityEngine;
 
 using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IContextualMenuManageable;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class ContextualMenuPlaceholder : InteractionBehaviourPlaceholder
     {
         #region Contextual menu

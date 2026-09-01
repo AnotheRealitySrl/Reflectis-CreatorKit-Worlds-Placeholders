@@ -1,4 +1,4 @@
-using Virtuademy.SDK.Core.Utilities;
+﻿using Virtuademy.SDK.Core.Utilities;
 
 using System;
 using System.Collections.Generic;
@@ -12,9 +12,11 @@ using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IContextualMenuManage
 using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IInteractable;
 using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IManipulable;
 using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IVisualScriptingInteractable;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class InteractablePlaceholderObsolete : SceneComponentPlaceholderNetwork
     {
         #region Shared settings

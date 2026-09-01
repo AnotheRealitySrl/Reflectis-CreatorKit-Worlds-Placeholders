@@ -1,7 +1,8 @@
-using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
+﻿using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
 
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
@@ -16,6 +17,7 @@ namespace Virtuademy.CreatorKit.Worlds.Placeholders
         TrackLabel
     }
 
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class WebViewPlaceholder : SceneComponentPlaceholderBase
     {
         [Header("Prefab instantiation")]

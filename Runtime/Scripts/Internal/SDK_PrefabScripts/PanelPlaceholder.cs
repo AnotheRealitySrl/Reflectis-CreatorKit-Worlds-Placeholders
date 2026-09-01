@@ -1,11 +1,13 @@
-using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
+﻿using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
 
 using System;
 
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class PanelPlaceholder : SceneComponentPlaceholderBase
     {
         [Serializable]

@@ -1,8 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public abstract class InformativeItem_Abstract : MonoBehaviour
     {
         public UnityEvent onTaskStart;

@@ -1,13 +1,15 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static Virtuademy.CreatorKit.Worlds.Placeholders.ToolInventoryPlaceholder;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class ToolInventoryPlaceholder : SpawnableHandlerPlaceholder
     {
         public enum EToolLayout
@@ -44,6 +46,7 @@ namespace Virtuademy.CreatorKit.Worlds.Placeholders
 
 #if UNITY_EDITOR
     [CustomEditor(typeof(ToolInventoryPlaceholder))]
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class ToolPlaceholderEditor : Editor
     {
         public override void OnInspectorGUI()

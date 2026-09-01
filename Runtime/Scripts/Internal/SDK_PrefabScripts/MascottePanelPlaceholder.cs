@@ -1,8 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     [RequireComponent(typeof(MascottePlaceholder))]
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class MascottePanelPlaceholder : PanelPlaceholder
     {
         [SerializeField]

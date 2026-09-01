@@ -1,9 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IManipulable;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class ManipulablePlaceholder : InteractionBehaviourPlaceholder
     {
         [SerializeField, Tooltip("Translate, rotate and scale.")]

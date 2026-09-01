@@ -4,9 +4,11 @@ using UnityEditor;
 #endif
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class InventoryItemTriggerDetectorPlaceholder : SceneComponentPlaceholderBase
     {
         [Tooltip("The reference to the item that triggers the action when entering the collider")]
@@ -29,6 +31,7 @@ namespace Virtuademy.CreatorKit.Worlds.Placeholders
 
 #if UNITY_EDITOR
     [CustomEditor(typeof(InventoryItemTriggerDetectorPlaceholder))]
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class InventoryItemTriggerDetectorPlaceholderEditor : Editor
     {
         public override void OnInspectorGUI()

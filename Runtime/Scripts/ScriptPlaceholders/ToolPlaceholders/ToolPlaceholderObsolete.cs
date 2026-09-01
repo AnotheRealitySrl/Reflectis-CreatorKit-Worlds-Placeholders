@@ -5,9 +5,11 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static Virtuademy.CreatorKit.Worlds.Placeholders.ToolPlaceholderObsolete;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class ToolPlaceholderObsolete : SpawnableHandlerPlaceholder
     {
         public enum EToolLayout
@@ -45,6 +47,7 @@ namespace Virtuademy.CreatorKit.Worlds.Placeholders
 
 #if UNITY_EDITOR
     [CustomEditor(typeof(ToolPlaceholderObsolete))]
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class ToolPlaceholderObsoleteEditor : Editor
     {
         public override void OnInspectorGUI()

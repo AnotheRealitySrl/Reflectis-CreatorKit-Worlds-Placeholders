@@ -1,11 +1,13 @@
 ﻿using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     [RequireComponent(typeof(PickablePlaceholder))]
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class ToolItemPlaceholderObsolete : PickablePlaceholder, IAddressablePlaceholder
     {
 
@@ -15,6 +17,7 @@ namespace Virtuademy.CreatorKit.Worlds.Placeholders
 
 #if UNITY_EDITOR
     [CustomEditor(typeof(ToolItemPlaceholderObsolete))]
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class ToolItemPlaceholderObsoleteEditor : Editor
     {
         public override void OnInspectorGUI()

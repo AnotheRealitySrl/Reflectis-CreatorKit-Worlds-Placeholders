@@ -1,4 +1,4 @@
-using Virtuademy.CreatorKit.Worlds.Core;
+﻿using Virtuademy.CreatorKit.Worlds.Core;
 using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
 using System.IO;
 
@@ -6,11 +6,13 @@ using System.IO;
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 #endif
 
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class SpawnableHandlerPlaceholder : SceneComponentPlaceholderBase
     {
 

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 using Unity.VisualScripting;
@@ -15,6 +15,7 @@ using Virtuademy.SDK.Core.Utilities;
 
 #if UNITY_EDITOR
 using UnityEditor;
+using UnityEngine.Scripting.APIUpdating;
 #endif
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
@@ -43,6 +44,7 @@ namespace Virtuademy.CreatorKit.Worlds.Placeholders
     }
 
     [Serializable]
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class QuizAnswer
     {
         [SerializeField, TextArea]
@@ -93,6 +95,7 @@ namespace Virtuademy.CreatorKit.Worlds.Placeholders
         }
     }
 
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class QuizPlaceholder : SceneComponentPlaceholderNetwork
     {
         #region Constants

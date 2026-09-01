@@ -1,4 +1,4 @@
-using Virtuademy.SDK.Core.Utilities;
+﻿using Virtuademy.SDK.Core.Utilities;
 
 using System;
 
@@ -8,10 +8,12 @@ using TMPro;
 using UnityEditor;
 
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     [Serializable]
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class POILinkPlaceholder : POIBlockPlaceholder
     {
         [Space]

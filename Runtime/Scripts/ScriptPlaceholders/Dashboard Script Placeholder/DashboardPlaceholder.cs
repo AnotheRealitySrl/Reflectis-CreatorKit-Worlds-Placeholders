@@ -1,10 +1,12 @@
-using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
+﻿using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
 using Virtuademy.SDK.Core.Utilities;
 
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class DashboardPlaceholder : SceneComponentPlaceholderBase, IAddressablePlaceholder
     {
         public enum DashboardFilter

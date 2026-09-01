@@ -1,13 +1,15 @@
-#if UNITY_EDITOR
+﻿#if UNITY_EDITOR
 using UnityEditor;
 #endif
 using UnityEngine;
 using UnityEngine.Events;
 using static Virtuademy.CreatorKit.Worlds.Core.Interaction.IManipulable;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
     [RequireComponent(typeof(InteractablePlaceholder), typeof(ManipulablePlaceholder))]
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class PickablePlaceholder : SceneComponentPlaceholderNetwork
     {
         [Tooltip("The name of the item")]

@@ -1,4 +1,4 @@
-using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
+﻿using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
 using Virtuademy.SDK.Core.Utilities;
 
 using TMPro;
@@ -8,9 +8,11 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class POIPlaceholder : SceneComponentPlaceholderBase, IAddressablePlaceholder
     {
         public enum ETitleVisibility

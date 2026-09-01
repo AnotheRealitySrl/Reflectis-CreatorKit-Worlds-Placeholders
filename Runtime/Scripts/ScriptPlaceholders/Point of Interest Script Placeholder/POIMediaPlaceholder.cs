@@ -1,12 +1,14 @@
-using Virtuademy.SDK.Core.Utilities;
+﻿using Virtuademy.SDK.Core.Utilities;
 
 using UnityEditor;
 
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class POIMediaPlaceholder : POIBlockPlaceholder
     {
         public enum EPOIBlockMediaType

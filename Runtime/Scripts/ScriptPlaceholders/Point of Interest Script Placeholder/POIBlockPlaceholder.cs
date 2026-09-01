@@ -1,11 +1,13 @@
-using Virtuademy.SDK.Core.Utilities;
+﻿using Virtuademy.SDK.Core.Utilities;
 
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public abstract class POIBlockPlaceholder : MonoBehaviour
     {
         [HelpBox("To edit the position/dimension of a block, you can simply modify the values of its RectTransform. " +

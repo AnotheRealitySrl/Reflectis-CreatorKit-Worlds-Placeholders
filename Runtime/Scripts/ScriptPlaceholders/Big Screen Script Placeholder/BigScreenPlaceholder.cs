@@ -1,11 +1,13 @@
-using Virtuademy.CreatorKit.Worlds.Core.ClientModels;
+﻿using Virtuademy.CreatorKit.Worlds.Core.ClientModels;
 using Virtuademy.SDK.Core.Utilities;
 
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class BigScreenPlaceholder : SceneComponentPlaceholderNetwork
     {
         [HelpBox("Do not change the value of \"IsNetworked\" field", HelpBoxMessageType.Warning)]

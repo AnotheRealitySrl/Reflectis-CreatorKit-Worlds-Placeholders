@@ -1,7 +1,9 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class InventorySlotPlaceholder : SceneComponentPlaceholderNetwork
     {
         [Tooltip("Number of wear slots in the wear inventory. You cannot equip or hold more that this value items")]

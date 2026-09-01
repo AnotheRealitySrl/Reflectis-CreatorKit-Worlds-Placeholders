@@ -1,13 +1,15 @@
-using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
+﻿using Virtuademy.CreatorKit.Worlds.Core.Placeholders;
 
 using TMPro;
 
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
 {
 
+    [MovedFrom(false, "Reflectis.CreatorKit.Worlds.Placeholders", "Reflectis.CreatorKit.Worlds.Placeholders")]
     public class RPMAvatarWebViewPlaceholder : SceneComponentPlaceholderBase
     {
         [SerializeField]
