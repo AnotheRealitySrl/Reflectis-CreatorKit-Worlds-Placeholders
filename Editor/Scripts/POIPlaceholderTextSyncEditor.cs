@@ -4,7 +4,7 @@ using UnityEditor;
 
 using UnityEngine;
 
-namespace Reflectis.CreatorKit.Worlds.Placeholders.Editor
+namespace Virtuademy.CreatorKit.Worlds.Placeholders.Editor
 {
     /// <summary>
     /// Keeps the POI placeholder text fields aligned with the TMP components in the placeholder

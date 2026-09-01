@@ -6,8 +6,8 @@ using System.IO;
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Scripting.APIUpdating;
 #endif
+using UnityEngine.Scripting.APIUpdating;
 
 
 namespace Virtuademy.CreatorKit.Worlds.Placeholders
