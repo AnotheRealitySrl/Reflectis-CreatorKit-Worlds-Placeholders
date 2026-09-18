@@ -1,0 +1,40 @@
+/* Ready-made look + hover feedback for the world-space button panel.
+   A world-author can freely edit everything here (colours, radius, the hover scale, transitions)
+   without writing any C#. The 1.2x hover grow lives entirely in .wsb-button:hover below. */
+
+.wsb-panel {
+    width: 420px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background-color: rgba(20, 22, 28, 0.85);
+    border-radius: 16px;
+}
+
+.wsb-button {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(56, 122, 255);
+    border-width: 0;
+    border-radius: 12px;
+    /* Grow from the middle and animate the scale/colour changes smoothly. */
+    transform-origin: center;
+    transition-property: scale, background-color;
+    transition-duration: 0.12s;
+    transition-timing-function: ease-out;
+}
+
+/* Hover: only fires where a hover pointer exists (VR ray + WebGL mouse). Not on Mobile touch. */
+.wsb-button:hover {
+    scale: 1.2 1.2;
+    background-color: rgb(80, 140, 255);
+}
+
+.wsb-button:active {
+    scale: 1.1 1.1;
+}
