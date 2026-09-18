@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Packages/com.anotherealitysrl.reflectis-creatorkit-worlds-placeholders/Runtime/ButtonTesting/360_WorldSpaceTeleportButton.uss?fileID=7433441132597879392&amp;guid=e3f29ed5be5a4dd7848f8c5dbbe63776&amp;type=3#360_WorldSpaceTeleportButton" />
+    <ui:VisualElement name="root" picking-mode="Ignore" class="tp-root">
     <ui:Button name="button" class="tp-button">
         <ui:VisualElement name="ring" picking-mode="Ignore" class="tp-ring" style="display: flex;" />
         <ui:VisualElement name="discSlot" picking-mode="Ignore" class="tp-slot" style="display: flex;">
@@ -12,4 +13,5 @@
             <ui:VisualElement name="arrowBlue" picking-mode="Ignore" class="tp-arrow tp-arrow-blue" />
         </ui:VisualElement>
     </ui:Button>
+    </ui:VisualElement>
 </ui:UXML>

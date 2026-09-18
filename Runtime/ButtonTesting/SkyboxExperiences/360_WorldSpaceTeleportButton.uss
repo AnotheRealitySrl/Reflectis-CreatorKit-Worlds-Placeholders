@@ -1,3 +1,10 @@
+/* Fills the panel and centres the button on both axes. */
+.tp-root {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
 .tp-button {
     width: 100px;
     height: 100px;
