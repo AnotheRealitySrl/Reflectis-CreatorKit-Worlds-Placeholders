@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7433631522474917470, guid: eae15ee45ce92b240abbaed60d8dcdab, type: 3}
+      propertyPath: sourceAsset
+      value: 
+      objectReference: {fileID: 9197481963319205126, guid: 2f7d2c90d2a243a184b65156414b5f71, type: 3}
     - target: {fileID: 395861612610239400, guid: 470830bec4eb4e441a6ce4c52d3efa58, type: 3}
       propertyPath: m_Name
       value: 360_WorldSpaceButton_SkyboxHOME Variant
@@ -52,6 +56,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4263121553547328206, guid: 470830bec4eb4e441a6ce4c52d3efa58, type: 3}
+      propertyPath: sourceAsset
+      value: 
+      objectReference: {fileID: 9197481963319205126, guid: 2f7d2c90d2a243a184b65156414b5f71, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
